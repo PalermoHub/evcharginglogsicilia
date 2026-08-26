@@ -386,13 +386,17 @@ function renderGaugeOccupied(points) {
         anchor: { show: true, size: 10, itemStyle: { color: ACCENT, borderColor: '#fff', borderWidth: 2 } },
         axisTick: { show: false },
         splitLine: { length: 12, lineStyle: { width: 2, color: 'rgba(255,255,255,.3)' } },
-        axisLabel: { distance: 22, fontSize: 12, color: '#aeb9cc' },
+        // 0-100 = quota percentuale, non conteggio: l'etichetta al centro
+        // deve leggere lo stesso numero a cui punta la lancetta, altrimenti
+        // il gauge mostra una posizione che il valore in grande smentisce
+        // (es. lancetta poco oltre lo zero ma "337" in evidenza).
+        axisLabel: { distance: 22, fontSize: 12, formatter: '{value}%', color: '#aeb9cc' },
         title: { show: false },
         detail: {
           valueAnimation: true,
-          formatter: () => `${occupate}`,
-          width: '60%',
-          fontSize: 32,
+          formatter: () => `${EVDrilldown.formatPct(quota)}%`,
+          width: '80%',
+          fontSize: 28,
           fontWeight: 'bolder',
           offsetCenter: [0, '35%'],
           color: ACCENT,
