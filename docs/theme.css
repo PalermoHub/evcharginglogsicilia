@@ -343,13 +343,42 @@ a:hover {
   border-radius: 0.75rem;
 }
 
+.map-wrap {
+  position: relative;
+}
+
+/* Logo Open Data Sicilia in overlay sulla mappa, angolo in basso a
+   destra: 10px sopra la barra di attribuzione nativa di MapLibre (bottom
+   :0/right:0, ~26px di altezza), così da non sovrapporsi al pulsante "i"
+   con le info sui tile/© nella stessa barra. */
+.map-credit-logo {
+  position: absolute;
+  right: 10px;
+  bottom: 36px;
+  z-index: 1;
+  line-height: 0;
+}
+
+.map-credit-logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+}
+
 /* Pulsante "home" custom (HomeMapControl in app.js): eredita da
    .maplibregl-ctrl-group la stessa dimensione/sfondo/hover dei controlli
    nativi (zoom, fullscreen) — qui serve solo centrare l'icona SVG. */
 .map-home-btn {
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
+  /* .maplibregl-ctrl-group ha sfondo bianco (vedi maplibre-gl.css): senza
+     un colore esplicito l'icona eredita il colore testo bianco della
+     pagina (data-bs-theme dark) e sparisce, bianco su bianco. #333 è lo
+     stesso grigio scuro usato dalle icone native di MapLibre (zoom,
+     bussola, fullscreen), per restare visivamente coerenti. */
+  color: #333;
 }
 
 .marker-pin {
@@ -484,6 +513,20 @@ a:hover {
 .filter-tab.has-active:not(.is-open) .count-badge {
   background: var(--accent-color);
   color: #fff;
+}
+
+/* "Azzera filtri": stessa pillola dei tab (.filter-tab), ma spinta in
+   fondo alla riga (margin-left: auto, la riga è un flex) e con stile
+   outline per restare un'azione visivamente distinta dalle sfaccettature
+   sopra cui agisce. */
+.filter-tab-reset {
+  margin-left: auto;
+  background: transparent;
+  border-style: dashed;
+}
+
+.filter-tab-reset:hover {
+  background: var(--surface-color-alt);
 }
 
 .filter-tab-body {

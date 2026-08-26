@@ -288,7 +288,10 @@ function renderFilters() {
       </div>`;
   }
 
-  panel.innerHTML = `<div class="filter-tabs">${tabsHtml}</div>${bodyHtml}`;
+  const resetHtml = `
+    <button type="button" class="filter-tab filter-tab-reset" id="filters-reset">Azzera filtri</button>`;
+
+  panel.innerHTML = `<div class="filter-tabs">${tabsHtml}${resetHtml}</div>${bodyHtml}`;
 
   panel.querySelectorAll('[data-facet-toggle]').forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -297,6 +300,10 @@ function renderFilters() {
       renderFilters(); // solo UI: nessun ricalcolo di mappa/tabella/gauge
     });
   });
+
+  // #filters-reset viene ricreato ad ogni renderFilters (innerHTML sopra),
+  // quindi il listener va riattaccato qui e non una volta sola all'avvio.
+  document.getElementById('filters-reset')?.addEventListener('click', resetFilters);
 
   panel.querySelectorAll('input[type="checkbox"][data-facet]').forEach((cb) => {
     cb.addEventListener('change', () => {
