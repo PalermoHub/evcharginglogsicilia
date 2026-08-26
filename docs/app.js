@@ -344,7 +344,7 @@ function renderFilters() {
 function applyFilters() {
   const points = getFilteredPoints();
   renderGaugeOccupied(points);
-  renderColonnineTotali(points);
+  renderColonnineTotali();
   renderUsageHeadline(points, lastGeneratedAt);
   renderTable(points);
   renderMapLayers(points);
@@ -401,20 +401,68 @@ function renderGaugeOccupied(points) {
       },
     ],
   });
-  window.addEventListener('resize', () => chart.resize());
+  // echarts.init su un nodo già inizializzato riusa la stessa istanza (con
+  // solo un warning in console): `chart` qui è quindi stabile tra le
+  // chiamate, e questo flag sull'istanza evita di accumulare un nuovo
+  // listener 'resize' — e quindi un resize() ridondante — a ogni filtro
+  // applicato (renderGaugeOccupied viene richiamato da applyFilters).
+  if (!chart._evResizeWired) {
+    chart._evResizeWired = true;
+    window.addEventListener('resize', () => chart.resize());
+  }
 
   const quotaLabel = EVDrilldown.formatPct(quota);
-  const caption = document.createElement('div');
-  caption.className = 'text-center text-muted small mt-2';
+  // Stesso motivo: senza id da riusare, ogni filtro applicato aggiungerebbe
+  // una nuova didascalia sotto il gauge invece di aggiornare quella
+  // esistente.
+  let caption = document.getElementById('gauge-occupied-caption');
+  if (!caption) {
+    caption = document.createElement('div');
+    caption.id = 'gauge-occupied-caption';
+    caption.className = 'text-center text-muted small mt-2';
+    el.parentElement.appendChild(caption);
+  }
   caption.textContent = `${occupate} veicoli in carica in questo momento (${quotaLabel}% delle ${monitorabili} colonnine dove è possibile avere il monitoraggio)`;
-  el.parentElement.appendChild(caption);
 }
 
-function renderColonnineTotali(points) {
+// Toggle di un valore della sfaccettatura "Stato" da fuori del pannello
+// filtri: usato dal grafico/legenda cliccabili di renderColonnineTotali
+// (docs/shared-drilldown.js), che deve restare interconnesso con lo stesso
+// Set condiviso dalle checkbox del pannello — non una copia separata.
+// `value` è una singola etichetta (toggle normale, add/remove) oppure un
+// array di etichette per il segmento aggregato "Attive": lì il click
+// isola quel gruppo (lo sostituisce alla selezione corrente), o la
+// azzera se il gruppo è già esattamente quello selezionato — coerente con
+// un click di legenda "mostra solo questo".
+function toggleStatoFilter(value) {
+  const set = activeFilters.stato;
+  if (Array.isArray(value)) {
+    const isExactGroup = value.length === set.size && value.every((v) => set.has(v));
+    set.clear();
+    if (!isExactGroup) value.forEach((v) => set.add(v));
+  } else if (set.has(value)) {
+    set.delete(value);
+  } else {
+    set.add(value);
+  }
+  applyFilters();
+}
+
+function renderColonnineTotali() {
   const el = document.getElementById('drilldown-totali');
   if (!el || !window.EVDrilldown) return;
-  const a22 = points.filter((p) => p.is_a22).length;
-  window.EVDrilldown.render(el, { ...summarize(points), a22, a22Label: autostradaLabel });
+  // Come le altre sfaccettature (buildFacetOptions): la base di conteggio
+  // di questo widget esclude solo il proprio filtro (stato), non gli altri
+  // già attivi — altrimenti selezionare uno stato farebbe collassare a 0
+  // tutti gli altri segmenti, impedendo di usarlo per aggiungerne un altro
+  // o per confrontarlo con le altre categorie mentre è filtrato.
+  const basePoints = allPoints.filter((p) => pointMatchesFilters(p, 'stato'));
+  const a22 = basePoints.filter((p) => p.is_a22).length;
+  window.EVDrilldown.render(
+    el,
+    { ...summarize(basePoints), a22, a22Label: autostradaLabel },
+    { selected: activeFilters.stato, onToggle: toggleStatoFilter }
+  );
 }
 
 function renderTopUsage(city) {
@@ -1134,7 +1182,7 @@ async function loadDashboard() {
   // pannello sfaccettato.
   const points = getFilteredPoints();
   renderGaugeOccupied(points);
-  renderColonnineTotali(points);
+  renderColonnineTotali();
   renderTopUsage(stationsUsage && stationsUsage.city);
   renderUsageHeadline(points, lastGeneratedAt);
   renderTable(points);

@@ -45,8 +45,9 @@ window.EVDrilldown = (() => {
   // cui" è scalata sul totale delle attive (la sua stessa larghezza), ma
   // le percentuali che mostra restano sul totale generale delle
   // colonnine, come richiesto.
-  function barOption(segments, axisMax, pctBase) {
+  function barOption(segments, axisMax, pctBase, interactive) {
     const canLabel = (v) => axisMax > 0 && v / axisMax >= 0.12;
+    const anySelected = interactive && segments.some((seg) => seg.selected);
     return {
       tooltip: {
         trigger: 'item',
@@ -54,6 +55,7 @@ window.EVDrilldown = (() => {
           const seg = segments[p.seriesIndex];
           let html = `${p.seriesName}: <strong>${p.value}</strong> (${pct1(p.value, pctBase)}%)`;
           if (seg && seg.extraLine) html += `<br>${seg.extraLine}`;
+          if (interactive && seg && seg.filterValue) html += '<br><em>Clicca per filtrare per stato</em>';
           return html;
         },
       },
@@ -65,10 +67,12 @@ window.EVDrilldown = (() => {
         type: 'bar',
         stack: 'totale',
         barWidth: '100%',
+        cursor: interactive && seg.filterValue ? 'pointer' : 'default',
         itemStyle: {
           color: seg.color,
-          borderColor: SURFACE_COLOR,
-          borderWidth: 2,
+          opacity: anySelected && !seg.selected ? 0.4 : 1,
+          borderColor: seg.selected ? '#ffffff' : SURFACE_COLOR,
+          borderWidth: seg.selected ? 3 : 2,
           borderRadius: i === 0 ? [6, 0, 0, 6] : i === segments.length - 1 ? [0, 6, 6, 0] : 0,
         },
         label: { show: canLabel(seg.value), position: 'inside', color: seg.textColor || '#fff', formatter: () => seg.value },
@@ -107,10 +111,34 @@ window.EVDrilldown = (() => {
     `;
   }
 
+  // Le 4 etichette di stato così come le restituisce displayState() in
+  // docs/app.js (stessa stringa usata come valore della sfaccettatura
+  // "Stato" — vedi FACETS): il grafico e la legenda diventano filtri
+  // interconnessi con quel pannello solo se usano identiche stringhe,
+  // non le etichette di comodo dei segmenti del grafico (es. "Non attive"
+  // plurale vs "Non attiva" singolare del filtro).
+  const STATO_IN_USO = 'In uso';
+  const STATO_ATTIVA_REALE = 'Attiva (reale)';
+  const STATO_ATTIVA_STIMATA = 'Attiva (stimata)';
+  const STATO_NON_ATTIVA = 'Non attiva';
+  const STATO_ATTIVE_GROUP = [STATO_IN_USO, STATO_ATTIVA_REALE, STATO_ATTIVA_STIMATA];
+
   // counts = { attivaReale, attivaStimata, inUso, nonAttiva, monitorabili }.
-  // Ritorna le due istanze ECharts (o null se ECharts non è caricato),
-  // utile solo per test manuali dalla console.
-  function render(container, counts) {
+  // `onToggle(value)`, se passato, rende il grafico e la legenda dei filtri
+  // cliccabili, interconnessi con lo stesso stato condiviso da tutte le
+  // altre sfaccettature (docs/app.js, activeFilters.stato): `value` è una
+  // singola etichetta di stato, o un array di etichette per il segmento
+  // aggregato "Attive" della barra in alto. `selected` è il Set (o array)
+  // di etichette attualmente selezionate altrove (es. dal pannello Stato),
+  // usato per evidenziare qui lo stesso stato — l'interconnessione va in
+  // entrambe le direzioni. Ritorna le due istanze ECharts (o null se
+  // ECharts non è caricato), utile solo per test manuali dalla console.
+  function render(container, counts, { onToggle, selected } = {}) {
+    const selectedSet = selected instanceof Set ? selected : new Set(selected || []);
+    const interactive = typeof onToggle === 'function';
+    const isSelected = (label) => selectedSet.has(label);
+    const groupSelected = STATO_ATTIVE_GROUP.every(isSelected);
+
     const attivaReale = counts.attivaReale || 0;
     const attivaStimata = counts.attivaStimata || 0;
     const inUso = counts.inUso || 0;
@@ -126,6 +154,23 @@ window.EVDrilldown = (() => {
     const monitorabili = counts.monitorabili || 0;
     const quotaInUso = ratio(inUso, monitorabili);
 
+    // Ogni voce di legenda porta il proprio valore di sfaccettatura in
+    // data-filter-value: cliccarla equivale a spuntare quella stessa
+    // opzione nel pannello "Stato" (stesso Set condiviso, vedi
+    // toggleStatoFilter in docs/app.js) — da qui "is-selected"/"is-dimmed"
+    // per riflettere qui lo stato attivo, in entrambe le direzioni.
+    const legendItem = (label, color, value, textColor) => {
+      const sel = isSelected(label);
+      const cls = ['map-legend-item'];
+      if (interactive) cls.push('filter-legend-item');
+      if (sel) cls.push('is-selected');
+      else if (selectedSet.size) cls.push('is-dimmed');
+      const attrs = interactive
+        ? `role="button" tabindex="0" data-filter-value="${label}" aria-pressed="${sel}"`
+        : '';
+      return `<span class="${cls.join(' ')}" ${attrs}><span class="map-legend-dot" style="background:${color}"></span>${label} · <strong${textColor ? ` style="color:${textColor}"` : ''}>${value}</strong></span>`;
+    };
+
     const a22 = counts.a22 || 0;
     const a22Label = counts.a22Label || 'autostrada';
     container.innerHTML = `
@@ -136,13 +181,27 @@ window.EVDrilldown = (() => {
       <div class="drilldown-connector"><svg role="presentation"></svg></div>
       <div class="drilldown-bar-bottom-wrap"><div class="drilldown-bar-bottom"></div></div>
       <div class="map-legend mt-3">
-        <span class="map-legend-item"><span class="map-legend-dot" style="background:${ACCENT}"></span>In uso · <strong>${inUso}</strong></span>
-        <span class="map-legend-item"><span class="map-legend-dot" style="background:${HERO_GREEN}"></span>Attiva (reale) · <strong>${attivaReale}</strong></span>
-        <span class="map-legend-item"><span class="map-legend-dot" style="background:${HERO_GREEN_LIGHT}"></span>Attiva (stimata) · <strong>${attivaStimata}</strong></span>
-        <span class="map-legend-item"><span class="map-legend-dot" style="background:${STATUS_RED}"></span>Non attiva · <strong>${nonAttiva}</strong></span>
+        ${legendItem(STATO_IN_USO, ACCENT, inUso)}
+        ${legendItem(STATO_ATTIVA_REALE, HERO_GREEN, attivaReale)}
+        ${legendItem(STATO_ATTIVA_STIMATA, HERO_GREEN_LIGHT, attivaStimata)}
+        ${legendItem(STATO_NON_ATTIVA, STATUS_RED, nonAttiva)}
       </div>
       <p class="text-muted small mt-3 mb-0">Non tutte le colonnine sono monitorabili: la categoria "in uso" può essere mostrata solo per quelle disponibili su cui l'app riesce a rilevare l'occupazione in tempo reale.</p>
+      ${interactive ? '<p class="text-muted small mt-2 mb-0">Clicca una barra o la legenda per filtrare per stato — si somma agli altri filtri attivi.</p>' : ''}
     `;
+
+    if (interactive) {
+      container.querySelectorAll('[data-filter-value]').forEach((el) => {
+        const trigger = () => onToggle(el.dataset.filterValue);
+        el.addEventListener('click', trigger);
+        el.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            trigger();
+          }
+        });
+      });
+    }
 
     if (typeof echarts === 'undefined') return null;
 
@@ -156,29 +215,49 @@ window.EVDrilldown = (() => {
     // scomposto — da qui il connettore a staffa che li unisce.
     bottomWrapEl.style.width = `${fracAttiva * 100}%`;
 
+    const topSegments = [
+      { name: 'Attive', value: attiva, color: HERO_GREEN, filterValue: STATO_ATTIVE_GROUP, selected: groupSelected },
+      { name: 'Non attive', value: nonAttiva, color: STATUS_RED, filterValue: STATO_NON_ATTIVA, selected: isSelected(STATO_NON_ATTIVA) },
+    ];
     const topChart = echarts.init(topEl, 'evtrento-dark');
-    topChart.setOption(barOption([{ name: 'Attive', value: attiva, color: HERO_GREEN }, { name: 'Non attive', value: nonAttiva, color: STATUS_RED }], totale, totale));
+    topChart.setOption(barOption(topSegments, totale, totale, interactive));
 
+    const bottomSegments = [
+      {
+        name: STATO_IN_USO,
+        value: inUso,
+        color: ACCENT,
+        extraLine: `Quota su monitorabili: <strong>${formatPct(quotaInUso)}%</strong>`,
+        filterValue: STATO_IN_USO,
+        selected: isSelected(STATO_IN_USO),
+      },
+      { name: STATO_ATTIVA_REALE, value: attivaReale, color: HERO_GREEN, filterValue: STATO_ATTIVA_REALE, selected: isSelected(STATO_ATTIVA_REALE) },
+      { name: STATO_ATTIVA_STIMATA, value: attivaStimata, color: HERO_GREEN_LIGHT, textColor: '#173318', filterValue: STATO_ATTIVA_STIMATA, selected: isSelected(STATO_ATTIVA_STIMATA) },
+    ];
     const bottomChart = echarts.init(bottomEl, 'evtrento-dark');
     bottomChart.setOption(
       barOption(
-        [
-          {
-            name: 'In uso',
-            value: inUso,
-            color: ACCENT,
-            extraLine: `Quota su monitorabili: <strong>${formatPct(quotaInUso)}%</strong>`,
-          },
-          { name: 'Attiva (reale)', value: attivaReale, color: HERO_GREEN },
-          { name: 'Attiva (stimata)', value: attivaStimata, color: HERO_GREEN_LIGHT, textColor: '#173318' },
-        ],
+        bottomSegments,
         // Scala visiva della barra: il totale delle attive (larga quanto
         // il segmento Attive sopra). Percentuali del tooltip invece sul
         // totale generale (`totale`, non `attiva`) per tutti i segmenti.
         attiva,
-        totale
+        totale,
+        interactive
       )
     );
+
+    if (interactive) {
+      [
+        [topChart, topSegments],
+        [bottomChart, bottomSegments],
+      ].forEach(([chart, segs]) => {
+        chart.on('click', (p) => {
+          const seg = segs[p.seriesIndex];
+          if (seg && seg.filterValue) onToggle(seg.filterValue);
+        });
+      });
+    }
 
     drawConnector(svgEl, fracAttiva);
 

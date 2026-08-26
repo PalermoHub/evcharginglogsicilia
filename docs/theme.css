@@ -379,7 +379,11 @@ a:hover {
 }
 
 .map-credit-logo img {
-  height: 60px;
+  /* pa_hub_new.png è un banner orizzontale (600x160, non più il logo
+     quasi quadrato di prima): un'altezza pensata per quello lo renderebbe
+     largo oltre 200px, troppo invadente per un badge di credito
+     nell'angolo della mappa — qui scala a un ingombro paragonabile. */
+  height: 30px;
   width: auto;
   display: block;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
@@ -462,6 +466,36 @@ a:hover {
   border-radius: 50%;
   border: 2px solid white;
   flex: none;
+}
+
+/* Legenda del widget "Colonnine totali" (docs/shared-drilldown.js) quando
+   fa anche da filtro: stessa logica visiva di .filter-facet-option
+   (is-selected/is-zero) più sotto, riusata qui perché è lo stesso concetto
+   — un valore della sfaccettatura "Stato" — solo in un punto diverso della
+   pagina. */
+.filter-legend-item {
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem 0.15rem 0.35rem;
+  margin: -0.15rem -0.55rem -0.15rem -0.35rem;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.filter-legend-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.filter-legend-item:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 1px;
+}
+
+.filter-legend-item.is-selected {
+  background: rgba(40, 161, 189, 0.16);
+}
+
+.filter-legend-item.is-dimmed {
+  opacity: 0.45;
 }
 
 /* Pannello filtri sfaccettati: una riga di tab compatte (una per
