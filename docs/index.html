@@ -124,7 +124,12 @@
             </div>
           </div>
           <div class="map-wrap">
-            <div id="map" class="map-container"></div>
+            <div id="map" class="map-container">
+              <div id="map-loading" class="map-loading">
+                <div class="spinner-border spinner-border-sm text-info" role="status" aria-hidden="true"></div>
+                <span>Caricamento mappa…</span>
+              </div>
+            </div>
             <a
               href="https://opendatasicilia.it/"
               target="_blank"
@@ -161,7 +166,14 @@
                   <th>Ultimo uso</th>
                 </tr>
               </thead>
-              <tbody id="points-table"></tbody>
+              <tbody id="points-table">
+                <tr>
+                  <td colspan="8" class="text-center text-muted py-4">
+                    <div class="spinner-border spinner-border-sm text-info me-2" role="status" aria-hidden="true"></div>
+                    Caricamento dati…
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

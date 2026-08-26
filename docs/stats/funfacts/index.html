@@ -46,8 +46,13 @@
 
     <main class="container py-4">
       <section class="mb-4">
-        <h1 class="h3 mb-1">Curiosità</h1>
-        <p class="text-muted" id="days-note">Calcolate sullo storico raccolto finora.</p>
+        <div class="card shadow-sm hero-card">
+          <div class="card-body">
+            <span class="hero-eyebrow">Curiosità</span>
+            <h1 class="h3 mb-2">Numeri insoliti sulle colonnine in <span data-comune>Sicilia</span></h1>
+            <p class="mb-0 text-muted" id="days-note">Calcolate sullo storico raccolto finora.</p>
+          </div>
+        </div>
       </section>
 
       <section class="row g-3 mb-4" id="curiosities-cards"></section>
@@ -131,10 +136,12 @@
         </div>
       </section>
 
-      <section id="empty-state" class="d-none">
-        <div class="alert alert-light border">
-          Ancora nessuna curiosità matura: la raccolta è appena iniziata. Alcune curiosità (es. l'ora di punta)
-          hanno bisogno di qualche giorno di storico prima di poter dire qualcosa di vero — torna tra un po'.
+      <section id="empty-state" class="card shadow-sm d-none">
+        <div class="card-body">
+          <div class="section-eyebrow">Curiosità</div>
+          <h2 class="h5 mb-2">Ancora nessuna curiosità matura</h2>
+          <p class="text-muted mb-0">La raccolta è appena iniziata. Alcune curiosità (es. l'ora di punta)
+            hanno bisogno di qualche giorno di storico prima di poter dire qualcosa di vero — torna tra un po'.</p>
         </div>
       </section>
     </main>

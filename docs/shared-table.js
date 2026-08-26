@@ -7,7 +7,7 @@
 // Richiamabile più volte sulla stessa tabella (es. dopo un re-render dei
 // dati): rimuove toolbar/paginazione precedenti e ripristina lo stato.
 
-function enhanceTable(tableEl, { pageSize = 10 } = {}) {
+function enhanceTable(tableEl, { pageSize = 25 } = {}) {
   if (!tableEl) return;
   const tbody = tableEl.querySelector('tbody');
   const thead = tableEl.querySelector('thead');
@@ -33,10 +33,9 @@ function enhanceTable(tableEl, { pageSize = 10 } = {}) {
       <label class="small text-muted mb-0">Righe per pagina</label>
       <select class="form-select form-select-sm ev-table-page-size" style="width: auto">
         <option value="10">10</option>
-        <option value="20">20</option>
-        <option value="30">30</option>
-        <option value="40">40</option>
+        <option value="25">25</option>
         <option value="50">50</option>
+        <option value="100">100</option>
       </select>
       <button type="button" class="btn btn-sm btn-outline-secondary ev-table-fullscreen-btn">Schermo intero</button>
     </div>
@@ -108,23 +107,49 @@ function enhanceTable(tableEl, { pageSize = 10 } = {}) {
     return (cell.dataset.sortValue ?? cell.textContent).toString().trim();
   }
 
+  // Pagine da mostrare come numeri cliccabili: sempre prima, ultima e le
+  // vicine alla corrente, con "…" per il resto — invece di un bottone per
+  // ognuna delle N pagine, che con centinaia di risultati diventa un muro
+  // di numeri costretto a scorrere in orizzontale.
+  function pageWindow(totalPages) {
+    const span = 2;
+    const nums = new Set([1, totalPages]);
+    for (let p = page - span; p <= page + span; p += 1) {
+      if (p >= 1 && p <= totalPages) nums.add(p);
+    }
+    const sorted = Array.from(nums).sort((a, b) => a - b);
+    const out = [];
+    sorted.forEach((p, i) => {
+      if (i > 0 && p - sorted[i - 1] > 1) out.push('…');
+      out.push(p);
+    });
+    return out;
+  }
+
   function renderPagination(totalPages, totalRows) {
     if (totalPages <= 1) {
       paginationWrap.innerHTML = `<div class="small text-muted">${totalRows} risultat${totalRows === 1 ? 'o' : 'i'}</div>`;
       return;
     }
-    const items = [];
-    for (let p = 1; p <= totalPages; p += 1) {
+    const items = [
+      `<li class="page-item ${page === 1 ? 'disabled' : ''}"><button type="button" class="page-link" data-page="${page - 1}" ${page === 1 ? 'disabled' : ''}>‹</button></li>`,
+    ];
+    pageWindow(totalPages).forEach((p) => {
       items.push(
-        `<li class="page-item ${p === page ? 'active' : ''}"><button type="button" class="page-link" data-page="${p}">${p}</button></li>`
+        p === '…'
+          ? '<li class="page-item disabled"><span class="page-link">…</span></li>'
+          : `<li class="page-item ${p === page ? 'active' : ''}"><button type="button" class="page-link" data-page="${p}">${p}</button></li>`
       );
-    }
+    });
+    items.push(
+      `<li class="page-item ${page === totalPages ? 'disabled' : ''}"><button type="button" class="page-link" data-page="${page + 1}" ${page === totalPages ? 'disabled' : ''}>›</button></li>`
+    );
     paginationWrap.innerHTML = `
       <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-        <div class="small text-muted">${totalRows} risultati</div>
+        <div class="small text-muted">${totalRows} risultati · pagina ${page} di ${totalPages}</div>
         <ul class="pagination pagination-sm mb-0">${items.join('')}</ul>
       </div>`;
-    paginationWrap.querySelectorAll('[data-page]').forEach((btn) => {
+    paginationWrap.querySelectorAll('[data-page]:not([disabled])').forEach((btn) => {
       btn.addEventListener('click', () => {
         page = parseInt(btn.dataset.page, 10);
         render();

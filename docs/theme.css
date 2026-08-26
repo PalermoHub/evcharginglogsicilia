@@ -347,6 +347,25 @@ a:hover {
   position: relative;
 }
 
+/* Segnaposto mostrato mentre MapLibre carica stile/tile (docs/index.html):
+   rimosso via JS al primo evento 'load' della mappa (docs/app.js,
+   createMap). Copre l'intero .map-container invece di lasciarlo vuoto, per
+   non dare l'impressione che la sezione sia rotta durante il fetch dati
+   che precede l'inizializzazione della mappa. */
+.map-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--surface-color-alt);
+  border-radius: 0.75rem;
+  color: var(--bs-body-color);
+  font-size: 0.9rem;
+}
+
 /* Logo Open Data Sicilia in overlay sulla mappa, angolo in basso a
    destra: 10px sopra la barra di attribuzione nativa di MapLibre (bottom
    :0/right:0, ~26px di altezza), così da non sovrapporsi al pulsante "i"

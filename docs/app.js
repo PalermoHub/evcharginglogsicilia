@@ -432,7 +432,20 @@ function renderTopUsage(city) {
         <div class="small text-muted">${top.cpo} · ${top.n_sessioni} sessioni · ${top.energia_totale_kwh_stimata} kWh (stima)</div>
       </div>`);
   }
-  if (topOperatori && topOperatori.length) {
+  // Con meno di 2 giorni di storico le sessioni rilevate finora sono troppo
+  // poche perché l'energia stimata sia un dato leggibile (spesso 0 kWh, che
+  // letto da solo sembra un errore invece che "raccolta appena iniziata") —
+  // stessa soglia "servono almeno 2 giorni di storico" usata in Statistiche.
+  const abbastanzaStorico = city && city.days_collected >= 2;
+  if (top && abbastanzaStorico) {
+    righe.push(`
+      <div class="mb-3">
+        <div class="small text-muted">Colonnina più usata</div>
+        <div class="fw-semibold station-link" data-station-popover="${top.id_evse}">${top.indirizzo}</div>
+        <div class="small text-muted">${top.cpo} · ${top.n_sessioni} sessioni · ${top.energia_totale_kwh_stimata} kWh (stima)</div>
+      </div>`);
+  }
+  if (topOperatori && topOperatori.length && abbastanzaStorico) {
     const leader = topOperatori[0];
     righe.push(`
       <div class="mb-3">
@@ -441,8 +454,8 @@ function renderTopUsage(city) {
         <div class="small text-muted">${leader.energia_totale_kwh_stimata} kWh erogati (stima) su ${leader.n_colonnine} colonnine</div>
       </div>`);
   }
-  if (!top && (!topOperatori || topOperatori.length === 0)) {
-    righe.push('<p class="text-muted small mb-3">Dati d\'uso non ancora disponibili.</p>');
+  if (!abbastanzaStorico || (!top && (!topOperatori || topOperatori.length === 0))) {
+    righe.push('<p class="text-muted small mb-3">Dati d\'uso non ancora disponibili: servono almeno 2 giorni di storico.</p>');
   }
   box.innerHTML = righe.join('');
   if (window.EVUsage) EVUsage.wirePopovers(box);
@@ -1002,6 +1015,7 @@ function createMap() {
   map.addControl(new HomeMapControl(), 'top-right');
 
   map.on('load', () => {
+    document.getElementById('map-loading')?.remove();
     renderMapLayers(getFilteredPoints());
 
     // Registrati dopo i click handler dei layer (aggiunti da renderMapLayers
@@ -1071,7 +1085,12 @@ function renderUsageHeadline(points, generatedAt) {
   // "Oggi" = dalle 00:00 di oggi ora italiana, non ultime 24h: stessa
   // definizione di calendario usata ovunque compaia questo dato (popup,
   // pagina Statistiche — vedi generate_station_usage.py).
-  const kwhOggi = stationsUsage && stationsUsage.city && stationsUsage.city.energia
+  // Con meno di 2 giorni di storico l'energia stimata è quasi sempre 0
+  // (nessuna sessione ancora completata da misurare): mostrarla comunque
+  // si legge come un errore, non come "dato in arrivo" — stessa soglia
+  // usata per il box "Più usate" e per i grafici di Statistiche.
+  const abbastanzaStorico = stationsUsage && stationsUsage.city && stationsUsage.city.days_collected >= 2;
+  const kwhOggi = abbastanzaStorico && stationsUsage.city.energia
     ? stationsUsage.city.energia.oggi_kwh
     : null;
 
