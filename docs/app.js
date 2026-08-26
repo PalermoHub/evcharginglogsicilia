@@ -651,9 +651,23 @@ function wireTableFocus() {
 
 // --- Popup mappa (contenuto condiviso da shared-usage.js) ---------------
 
+// Link universale Google Maps (api=1&query=lat,lon): su smartphone, se
+// l'app Google Maps è installata, il sistema operativo intercetta il link
+// e apre l'app di navigazione al posto del browser; su desktop apre
+// semplicemente Google Maps nel browser. Un solo URL per entrambi i casi,
+// niente sniffing dello user agent.
+function directionsUrl(point) {
+  return point.lat != null && point.lon != null
+    ? `https://www.google.com/maps/search/?api=1&query=${point.lat},${point.lon}`
+    : null;
+}
+
 function popupHtml(point) {
   const { label } = displayState(point);
-  return `<strong>${point.cpo || 'Operatore'}</strong>${point.is_a22 ? ` <span class="badge bg-warning text-dark">${autostradaLabel || 'autostrada'}</span>` : ''}<br>${point.indirizzo || '—'}<br>Stato: ${label}<br><span class="text-muted small">${point.id_evse}</span>${EVUsage.stationHtml(point.id_evse, { usageObservable: point.usage_observable })}`;
+  const address = point.indirizzo || '—';
+  const mapsUrl = directionsUrl(point);
+  const addressHtml = mapsUrl ? `<a href="${mapsUrl}" target="_blank" rel="noopener">${address}</a>` : address;
+  return `<strong>${point.cpo || 'Operatore'}</strong>${point.is_a22 ? ` <span class="badge bg-warning text-dark">${autostradaLabel || 'autostrada'}</span>` : ''}<br>${addressHtml}<br>Stato: ${label}<br><span class="text-muted small">${point.id_evse}</span>${EVUsage.stationHtml(point.id_evse, { usageObservable: point.usage_observable })}`;
 }
 
 // Un popup aperto vicino al bordo della mappa può sconfinare fuori
