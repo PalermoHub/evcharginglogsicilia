@@ -380,26 +380,31 @@ function renderGaugeOccupied(points) {
         min: 0,
         max: 100,
         splitNumber: 5,
-        progress: { show: true, width: 16, itemStyle: { color: ACCENT } },
-        axisLine: { lineStyle: { width: 16, color: [[1, TRACK_DIM]] } },
-        pointer: { show: true, length: '55%', width: 4, itemStyle: { color: ACCENT } },
-        anchor: { show: true, size: 10, itemStyle: { color: ACCENT, borderColor: '#fff', borderWidth: 2 } },
+        radius: '92%',
+        progress: { show: true, width: 18, itemStyle: { color: ACCENT } },
+        axisLine: { lineStyle: { width: 18, color: [[1, TRACK_DIM]] } },
+        pointer: { show: true, length: '55%', width: 5, itemStyle: { color: ACCENT } },
+        anchor: { show: true, size: 11, itemStyle: { color: ACCENT, borderColor: '#fff', borderWidth: 2 } },
         axisTick: { show: false },
-        splitLine: { length: 12, lineStyle: { width: 2, color: 'rgba(255,255,255,.3)' } },
+        splitLine: { length: 13, lineStyle: { width: 2, color: 'rgba(255,255,255,.3)' } },
         // 0-100 = quota percentuale, non conteggio: l'etichetta al centro
         // deve leggere lo stesso numero a cui punta la lancetta, altrimenti
         // il gauge mostra una posizione che il valore in grande smentisce
         // (es. lancetta poco oltre lo zero ma "337" in evidenza).
-        axisLabel: { distance: 22, fontSize: 12, formatter: '{value}%', color: '#aeb9cc' },
+        axisLabel: { distance: 24, fontSize: 13, formatter: '{value}%', color: '#aeb9cc' },
         title: { show: false },
         detail: {
           valueAnimation: true,
-          formatter: () => `${EVDrilldown.formatPct(quota)}%`,
+          // Due righe: la quota (stessa scala della lancetta) in grande, il
+          // conteggio reale sotto in piccolo — senza dover leggere la
+          // didascalia per sapere "quante colonnine" corrisponde la %.
+          formatter: () => `{pct|${EVDrilldown.formatPct(quota)}%}\n{count|${occupate} in carica}`,
+          rich: {
+            pct: { fontSize: 24, fontWeight: 'bolder', color: ACCENT, lineHeight: 28 },
+            count: { fontSize: 14, fontWeight: 'normal', color: '#aeb9cc', lineHeight: 19 },
+          },
           width: '80%',
-          fontSize: 28,
-          fontWeight: 'bolder',
-          offsetCenter: [0, '35%'],
-          color: ACCENT,
+          offsetCenter: [0, '52%'],
         },
         data: [{ value: quota, name: 'occupate' }],
       },
