@@ -1,0 +1,53 @@
+# .github/workflows/scrape.yml
+name: scrape
+
+on:
+  schedule:
+    - cron: '0 * * * *'      # ogni ora (UTC). Il loop interno copre i 5 min.
+  workflow_dispatch: {}       # avvio manuale dalla tab Actions
+
+permissions:
+  contents: write             # serve al GITHUB_TOKEN per fare push
+
+concurrency:
+  group: scrape               # niente run sovrapposti che si pestano sul push
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Configura git
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Scrape loop (~55 min, un ciclo ogni 5 min)
+        run: |
+          for i in $(seq 1 12); do
+            echo "── iterazione $i/12  $(date -u +%H:%M:%SZ) ──"
+            python pun_scraper.py --once --outdir data --statedir state || true
+            if [ -n "$(git status --porcelain data state)" ]; then
+              # nuovi dati: rigenera lo snapshot live per la mappa (leggero,
+              # ogni ciclo). Le aggregazioni pesanti (trend/curiosità/
+              # previsioni) restano al workflow giornaliero update_stats.
+              python generate_frontend_snapshot.py || true
+              git add data state docs/evcharging_snapshot.json
+              git commit -m "scrape $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+              git push || true
+            else
+              echo "nessuna modifica (dedup)"
+            fi
+            if [ "$i" -lt 12 ]; then sleep 300; fi
+          done

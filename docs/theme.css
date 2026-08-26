@@ -1,0 +1,611 @@
+/* Tema scuro condiviso da tutte le pagine (docs/, docs/stats/, docs/info/,
+   docs/stats/funfacts/, docs/stats/forecast/) — sostituisce i due fogli di
+   stile duplicati (docs/styles.css, docs/stats/styles.css) che avevano le
+   stesse variabili copiate a mano in due posti.
+
+   Palette ispirata al template Workfolio (bootstrapmade.com), accento
+   ricolorato sul nostro brand: #096277 ha ottimo contrasto come *fill* con
+   testo bianco sopra (badge, card piene) ma fallisce il contrasto minimo
+   come testo/tratto/icona direttamente su sfondo scuro (2.7:1, serve
+   3:1+). --accent-color è una tinta più chiara sulla stessa tonalità
+   (H≈191.5°), validata con lo skill dataviz (validate_palette.js, --mode
+   dark): banda di luminosità, chroma floor, separazione CVD dal verde di
+   stato e contrasto tutti PASS. --bs-primary resta il vecchio hex,
+   invariato, per i ruoli a riempimento pieno dove va ancora benissimo. */
+:root,
+:root[data-bs-theme='dark'] {
+  --bs-body-bg: #0a1020;
+  --bs-body-color: #aeb9cc;
+  --bs-emphasis-color: #ffffff;
+  --bs-border-color: rgba(255, 255, 255, 0.08);
+  --bs-link-color: #28a1bd;
+  --bs-link-color-rgb: 40, 161, 189;
+  --bs-link-hover-color: #4dc1e0;
+  --bs-primary: #096277;
+  --bs-primary-rgb: 9, 98, 119;
+  --bs-success: #1da542;
+  --bs-success-rgb: 29, 165, 66;
+  --bs-danger: #35528d;
+  --bs-danger-rgb: 53, 82, 141;
+  --surface-color: #171f30;
+  --surface-color-alt: #1c2540;
+  --accent-color: #28a1bd;
+  --hero-blue-pale: rgba(255, 255, 255, 0.12);
+  --status-red: #b02a2a;
+  --heading-font: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bs-body-bg);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+a {
+  color: var(--bs-link-color);
+}
+
+a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+/* --- Header ------------------------------------------------------------ */
+
+.site-header {
+  background: rgba(10, 16, 32, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--bs-border-color);
+  padding: 0.65rem 0;
+  z-index: 1030;
+}
+
+.site-logo {
+  text-decoration: none;
+}
+
+.site-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.site-logo-word {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--accent-color);
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--bs-body-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--accent-color);
+}
+
+/* --- Card / superfici ---------------------------------------------------- */
+
+.card {
+  --bs-card-bg: var(--surface-color);
+  --bs-card-border-color: var(--bs-border-color);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.75rem;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 0.35rem;
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+
+[data-aos] {
+  transition-duration: 600ms;
+}
+
+.hero-card {
+  border: none;
+  overflow: hidden;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .hero-banner-img {
+    height: 200px;
+  }
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  background: rgba(40, 161, 189, 0.12);
+  border: 1px solid rgba(40, 161, 189, 0.35);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* --- Popover / popup contenuto d'uso ------------------------------------- */
+
+/* Popup mappa (MapLibre) e popover Bootstrap (nomi colonnina/operatore
+   ovunque nel sito) restano sempre a sfondo bianco e testo nero,
+   indipendentemente dal tema scuro della pagina: senza questa regola il
+   testo eredita --bs-body-color (grigio chiaro, pensato per sfondo scuro)
+   e diventa quasi illeggibile sul bianco di default di MapLibre/Bootstrap. */
+.maplibregl-popup-content {
+  background: #ffffff;
+  color: #111111;
+  border-radius: 0.5rem;
+}
+
+.maplibregl-popup-content a {
+  color: #096277;
+}
+
+.maplibregl-popup-close-button {
+  color: #111111;
+}
+
+.popover {
+  --bs-popover-bg: #ffffff;
+  --bs-popover-border-color: rgba(0, 0, 0, 0.15);
+  --bs-popover-header-bg: #ffffff;
+  --bs-popover-header-color: #111111;
+  --bs-popover-body-color: #111111;
+}
+
+.popover a {
+  color: #096277;
+}
+
+.popup-usage dt {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #111111;
+}
+
+.popup-usage dd {
+  margin-bottom: 0.35rem;
+}
+
+/* Bootstrap applica a .text-muted un colore grigio con !important: dentro
+   popup/popover va comunque tutto in nero come il resto del contenuto,
+   quindi va sovrascritto esplicitamente qui invece che alla fonte (il
+   grigio resta corretto altrove nel sito). */
+.maplibregl-popup-content .text-muted,
+.popover-body .text-muted {
+  color: #111111 !important;
+}
+
+.station-link {
+  cursor: default;
+  border-bottom: 1px dotted rgba(174, 185, 204, 0.5);
+}
+
+/* --- Tabelle / grafici ---------------------------------------------------- */
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.echart-trend {
+  width: 100%;
+  min-height: 320px;
+}
+
+/* --- Fullscreen grafici (docs/shared-chart-tools.js) ---------------------- */
+/* L'elemento richiede il fullscreen su se stesso: senza queste regole
+   resterebbe alto quanto il min-height originale (es. 320px) invece di
+   riempire lo schermo, perché quel valore è un vincolo esplicito, non un
+   default che :fullscreen sovrascrive da solo. */
+.ev-chart-fullscreen-target:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  min-height: 0;
+  padding: 24px;
+  background: #0b1120;
+}
+
+/* --- Fullscreen tabelle (docs/shared-table.js) ---------------------------- */
+.ev-table-fullscreen-target:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  padding: 24px;
+  overflow-y: auto;
+  background: #0b1120;
+}
+
+.stat-card {
+  min-height: 100%;
+}
+
+/* --- Componente "colonnine totali -> di cui" (docs/shared-drilldown.js) -- */
+
+.drilldown-bar-top {
+  width: 100%;
+  height: 32px;
+}
+
+.drilldown-connector {
+  width: 100%;
+  height: 56px;
+  color: var(--bs-body-color);
+}
+
+.drilldown-connector svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.drilldown-bar-bottom-wrap {
+  /* Larghezza impostata via JS: esattamente la quota del segmento "Attive"
+     nella barra sopra, per restare visivamente il suo stesso sottoinsieme
+     scomposto (vedi drawConnector in shared-drilldown.js). */
+  min-width: 0;
+}
+
+.drilldown-bar-bottom {
+  width: 100%;
+  height: 40px;
+}
+
+/* --- Badge di stato colonnina (tabella live + eventuali riusi) ---------- */
+/* Colori dedicati invece dei bg-* di Bootstrap: qui serve la stessa
+   identica palette di mappa/legenda/stacked-bar (alcuni token bootstrap,
+   es. --bs-danger, sono già riassegnati ad altri scopi nel tema). */
+
+.badge-state {
+  color: #ffffff;
+}
+
+.badge-state.is-real {
+  background: #1da542;
+}
+
+.badge-state.is-estimated {
+  background: #8bc34a;
+  color: #173318;
+}
+
+.badge-state.is-inuse {
+  background: #28a1bd;
+}
+
+.badge-state.is-inactive {
+  background: #b02a2a;
+}
+
+/* .alert-light è usato per i placeholder "servono più giorni di storico":
+   il grigio chiaro di default di Bootstrap stona sulla superficie scura. */
+.alert-light {
+  background-color: var(--surface-color-alt);
+  border-color: var(--bs-border-color);
+  color: var(--bs-body-color);
+}
+
+/* Riga tabella selezionata dal fly-to tabella→mappa (docs/index.html) —
+   riusa la classe nativa Bootstrap `table-active`, già tematizzata dark
+   via data-bs-theme, invece di introdurne una nuova. */
+#live-table tbody tr[data-id-evse] {
+  cursor: pointer;
+}
+
+/* --- Mappa ----------------------------------------------------------------- */
+
+/* Niente overflow:hidden qui: MapLibre attacca popup/marker/controlli come
+   figli diretti di questo elemento, e con overflow:hidden un popup che
+   sconfina oltre i bordi (es. vicino al margine superiore della mappa)
+   viene tagliato via — compreso il pulsante di chiusura, che sta proprio
+   nell'angolo. L'arrotondamento visivo si applica solo al canvas. */
+.map-container {
+  width: 100%;
+  height: 520px;
+  border-radius: 0.75rem;
+}
+
+.map-container .maplibregl-canvas {
+  border-radius: 0.75rem;
+}
+
+/* Pulsante "home" custom (HomeMapControl in app.js): eredita da
+   .maplibregl-ctrl-group la stessa dimensione/sfondo/hover dei controlli
+   nativi (zoom, fullscreen) — qui serve solo centrare l'icona SVG. */
+.map-home-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker-pin {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.marker-pin.charging {
+  background: var(--accent-color);
+}
+
+/* Marker "esplosi" dallo spiderfy (docs/app.js, buildSpiderMarkers): un
+   po' più grandi del pin base per restare cliccabili anche quando sono
+   tanti e vicini, colorati per stato invece che con un colore unico di
+   gruppo — è proprio quello che permette di vedere a colpo d'occhio quale
+   stallo, tra quelli alla stessa stazione, è in uso. Il codice univoco
+   (id_evse) non compare come numero sul marker: è nel title (hover) e nel
+   popup al click. Stessa palette di .badge-state qui sopra. */
+.marker-pin.spider-marker {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.marker-pin.spider-marker.is-real {
+  background: #1da542;
+}
+
+.marker-pin.spider-marker.is-estimated {
+  background: #8bc34a;
+}
+
+.marker-pin.spider-marker.is-inuse {
+  background: #28a1bd;
+}
+
+.marker-pin.spider-marker.is-inactive {
+  background: #b02a2a;
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.map-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--bs-secondary-color, #aeb9cc);
+}
+
+.map-legend-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid white;
+  flex: none;
+}
+
+/* Pannello filtri sfaccettati: una riga di tab compatte (una per
+   dimensione: stato, operatore, comune...) + UN SOLO pannello sotto per
+   quella eventualmente aperta (accordion, vedi renderFilters in app.js).
+   Non una griglia di 6 card: in CSS Grid/Flex tutte le celle di una riga
+   condividono l'altezza della più alta, quindi con una sola sfaccettatura
+   espansa (elenco comuni lungo) le altre 5 restavano vuote alla stessa
+   altezza per pareggiare la riga. Con le tab fuori dal flusso "a card" il
+   problema non si pone. */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface-color-alt);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--heading-font);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--bs-body-color);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.filter-tab:hover {
+  border-color: var(--accent-color);
+  color: var(--bs-emphasis-color);
+}
+
+/* Tab con almeno un filtro attivo: bordo + sfondo accento tenue, per capire
+   a colpo d'occhio quali delle 6 dimensioni stanno filtrando in questo
+   momento senza doverle aprire una per una. */
+.filter-tab.has-active {
+  border-color: var(--accent-color);
+  background: rgba(40, 161, 189, 0.14);
+  color: var(--bs-emphasis-color);
+}
+
+/* Tab aperta (il cui elenco è mostrato nel pannello sotto): piena
+   dell'accento, come un tab-bar "attivo" convenzionale. */
+.filter-tab.is-open {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}
+
+.filter-tab .count-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: inherit;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+}
+
+.filter-tab.has-active:not(.is-open) .count-badge {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.filter-tab-body {
+  margin-top: 0.75rem;
+  background: var(--surface-color-alt);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.65rem;
+  padding: 0.85rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.filter-facet-search {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--bs-border-color);
+  color: var(--bs-body-color);
+}
+
+.filter-facet-search:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.15rem rgba(40, 161, 189, 0.25);
+}
+
+.filter-facet-options {
+  max-height: 176px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bs-border-color) transparent;
+}
+
+.filter-facet-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filter-facet-options::-webkit-scrollbar-thumb {
+  background: var(--bs-border-color);
+  border-radius: 999px;
+}
+
+.filter-facet-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  accent-color: var(--accent-color);
+  transition: background 0.15s ease;
+}
+
+.filter-facet-option:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Riga selezionata: sfondo accento tenue + label in evidenza, così i
+   filtri attivi si leggono anche scrollando la lista, non solo dal
+   checkbox spuntato. */
+.filter-facet-option.is-selected {
+  background: rgba(40, 161, 189, 0.14);
+}
+
+.filter-facet-option.is-selected label {
+  color: var(--bs-emphasis-color);
+  font-weight: 500;
+}
+
+.filter-facet-option.is-zero {
+  opacity: 0.38;
+}
+
+.filter-facet-option input[type='checkbox'] {
+  flex: none;
+  cursor: pointer;
+}
+
+.filter-facet-option label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  color: var(--bs-body-color);
+}
+
+.filter-facet-option .count {
+  flex: none;
+  min-width: 1.7em;
+  text-align: center;
+  color: var(--bs-secondary-color, #aeb9cc);
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+}
+
+/* Anello che evidenzia il punto raggiunto dal fly-to tabella→mappa:
+   pointer-events:none per non intercettare i click sui layer/marker
+   sottostanti (cluster, marker in ricarica/A22). */
+.marker-focus-ring {
+  width: 34px;
+  height: 34px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 0 6px rgba(40, 161, 189, 0.25);
+  pointer-events: none;
+  animation: focus-pulse 1.4s ease-out infinite;
+}
+
+@keyframes focus-pulse {
+  0% {
+    box-shadow: 0 0 0 4px rgba(40, 161, 189, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(40, 161, 189, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(40, 161, 189, 0);
+  }
+}

@@ -1,0 +1,55 @@
+# .github/workflows/update_stats.yml
+name: update_stats
+
+on:
+  schedule:
+    - cron: '30 2 * * *'   # una volta al giorno, fuori dagli orari di punta
+  workflow_dispatch: {}     # avvio manuale dalla tab Actions
+
+permissions:
+  contents: write            # serve al GITHUB_TOKEN per fare push
+
+concurrency:
+  group: update_stats
+  cancel-in-progress: false
+
+jobs:
+  update_stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Configura git
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Aggregazioni statistiche (POI, A22, trend, uso, curiosità, previsioni)
+        run: |
+          python generate_stats.py
+          python generate_trends.py
+          python generate_poi_proximity.py
+          python generate_station_usage.py
+          python generate_usage_timeseries.py
+          python generate_poi_usage.py
+          python generate_curiosities.py
+          python generate_forecast.py
+
+      - name: Commit
+        run: |
+          if [ -n "$(git status --porcelain docs/stats/data docs/stations_usage.json)" ]; then
+            git add docs/stats/data docs/stations_usage.json
+            git commit -m "update_stats $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+            git push
+          else
+            echo "nessuna modifica"
+          fi
