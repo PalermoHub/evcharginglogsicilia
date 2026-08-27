@@ -54,7 +54,7 @@ def contains_any(text: str, patterns):
 
 
 def build_operators(city_only: pd.DataFrame) -> list[dict]:
-    """Operatori cittadini (A22 escluse, ha già la sua sezione a parte),
+    """Operatori cittadini (autostrade escluse, hanno già la loro sezione a parte),
     con conteggio per fascia di potenza per il filtro lato frontend.
     Ordinata per numero di colonnine desc: i primi 3 elementi SONO la
     'top 3 operatori', nessun campo duplicato."""
@@ -98,14 +98,14 @@ def build_stats_payload(table: pd.DataFrame, latest: pd.DataFrame):
     latest['is_active_known'] = latest['is_active'] & latest['usage_observable']
     latest['is_active_unknown'] = latest['is_active'] & ~latest['usage_observable']
 
-    is_a22 = is_autostrada(latest['id_evse'], latest['cpo'], latest['indirizzo'])
-    latest['is_a22'] = is_a22
+    is_hwy = is_autostrada(latest['id_evse'], latest['cpo'], latest['indirizzo'])
+    latest['is_autostrada'] = is_hwy
     # Solo l'area configurata (comune o regione, vedi config.matches_area):
     # non le zone limitrofe che lo scraper raccoglie comunque nel dataset
-    # grezzo (bbox di discovery volutamente larga), e non l'A22 (pubblico
-    # diverso, sezione a parte più sotto).
+    # grezzo (bbox di discovery volutamente larga), e non le autostrade
+    # (pubblico diverso, sezione a parte più sotto).
     is_comune = matches_area(latest['citta'], latest['cap'])
-    city_only = latest[is_comune & ~is_a22]
+    city_only = latest[is_comune & ~is_hwy]
 
     summary = {
         'total': int(len(city_only)),
@@ -117,19 +117,19 @@ def build_stats_payload(table: pd.DataFrame, latest: pd.DataFrame):
         'share_active': round(city_only['is_active'].mean() * 100, 1) if len(city_only) else 0,
         'generated_at': latest['ts'].max().isoformat(),
         # Prima rilevazione in assoluto nel dataset grezzo (non filtrata per
-        # città/A22): dà il contesto — da quanti giorni raccogliamo dati —
-        # a tutte le statistiche della pagina, non solo a questo summary.
+        # città/autostrada): dà il contesto — da quanti giorni raccogliamo
+        # dati — a tutte le statistiche della pagina, non solo a questo summary.
         'raccolta_dati_dal': table['ts'].min().isoformat(),
     }
 
-    a22_df = latest[is_a22]
-    a22 = {
-        'count': int(len(a22_df)),
-        'active': int(a22_df['is_active'].sum()),
-        'inactive': int(a22_df['is_inactive'].sum()),
-        'charging': int(a22_df['is_charging'].sum()),
-        'share_active': round(a22_df['is_active'].mean() * 100, 1) if len(a22_df) else 0,
-        'operators': a22_df['cpo'].value_counts().head(5).to_dict(),
+    autostrada_df = latest[is_hwy]
+    autostrada = {
+        'count': int(len(autostrada_df)),
+        'active': int(autostrada_df['is_active'].sum()),
+        'inactive': int(autostrada_df['is_inactive'].sum()),
+        'charging': int(autostrada_df['is_charging'].sum()),
+        'share_active': round(autostrada_df['is_active'].mean() * 100, 1) if len(autostrada_df) else 0,
+        'operators': autostrada_df['cpo'].value_counts().head(5).to_dict(),
     }
 
     poi_rows = []
@@ -155,7 +155,7 @@ def build_stats_payload(table: pd.DataFrame, latest: pd.DataFrame):
 
     return {
         'summary': summary,
-        'a22': a22,
+        'autostrada': autostrada,
         'pois': poi_rows,
         'operators': operators,
     }

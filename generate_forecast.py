@@ -2,10 +2,10 @@
 generate_forecast.py — Previsione della quota di colonnine cittadine in
 ricarica, per i prossimi ORE_AVANTI ore.
 
-Le colonnine dell'autostrada A22 sono escluse a monte (vedi
-generate_trends.py per lo stesso ragionamento): pubblico di transito, non
-urbano, e nessun operatore autostradale pubblica oggi lo stato in tempo
-reale necessario per prevedere alcunché.
+Le colonnine delle autostrade siciliane configurate sono escluse a monte
+(vedi generate_trends.py per lo stesso ragionamento): pubblico di
+transito, non urbano, e nessun operatore autostradale pubblica oggi lo
+stato in tempo reale necessario per prevedere alcunché.
 
 Modello (stesso principio di forecast.py in parklogtrento): profilo
 stagionale giorno-settimana x ora, corretto con lo scostamento più recente,
@@ -54,7 +54,7 @@ def load_usage_observable_city_table() -> pd.DataFrame:
     table['ts'] = pd.to_datetime(table['ts'], utc=True)
     charging_cpos = cpos_with_charging(table)
     table['usage_observable'] = usage_observable(table, charging_cpos)
-    # Solo l'area configurata (non le zone limitrofe, non l'A22).
+    # Solo l'area configurata (non le zone limitrofe, non le autostrade).
     is_comune = matches_area(table['citta'], table['cap'])
     table['is_charging'] = table['stato_raw'].fillna('').str.upper().eq('CHARGING')
     return table[table['usage_observable'] & is_comune].copy()

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T07:16:59.525038+00:00",
+  "generated_at": "2026-08-27T07:31:05.150821+00:00",
   "days_collected": 2,
   "curiosita": [
     {
@@ -12,7 +12,7 @@
     },
     {
       "titolo": "Città o autostrada?",
-      "testo": "In questo momento il 67.2% delle colonnine di Sicilia è attivo, contro il 30.8% di quelle rilevate su A19 Palermo - Catania e A19 Palermo - Catania Pa/Ct (A19): pubblici diversi, andamenti diversi. È un confronto possibile solo perché la A22 è riconoscibile nei dati (operatore e ID dedicati); colonnine di altre autostrade, con altri gestori, non lo sarebbero allo stesso modo."
+      "testo": "In questo momento il 67.2% delle colonnine di Sicilia è attivo, contro il 30.8% di quelle rilevate su A19 Palermo - Catania e A19 Palermo - Catania Pa/Ct (A18/A19/A20/A29): pubblici diversi, andamenti diversi. È un confronto possibile solo perché queste colonnine autostradali sono riconoscibili nei dati (operatore e/o indirizzo dedicati); colonnine di altre autostrade, con altri gestori, non lo sarebbero allo stesso modo."
     },
     {
       "titolo": "Colonnine e città",
@@ -27,162 +27,30 @@
       "items": [
         {
           "rank": 1,
-          "id_evse": "IT*ENX*E23XP22T3KKJCK00159*2",
-          "indirizzo": "Gazometro",
-          "cpo": "ENEL X WAY ITALIA SRL",
+          "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2250700663*1",
+          "indirizzo": "Via Vallona, 5",
+          "cpo": "ACEA ENERGIA",
           "valore": "100.0% in ricarica",
-          "lat": 38.206906,
-          "lon": 15.561313,
+          "lat": 38.021209,
+          "lon": 12.519441,
           "potenza_w": 22000,
           "corrente": "AC",
           "fascia_potenza": "lenta"
         },
         {
           "rank": 2,
-          "id_evse": "IT*ENX*E18XP22T5AB5U000182*2",
-          "indirizzo": "Piazza Tenente Schicchi, 16",
+          "id_evse": "IT*ENX*E20XK11T2J03BB00561*1",
+          "indirizzo": "Firenze",
           "cpo": "ENEL X WAY ITALIA SRL",
           "valore": "100.0% in ricarica",
-          "lat": 37.932336,
-          "lon": 14.090043,
-          "potenza_w": 22000,
+          "lat": 38.18568,
+          "lon": 15.26752,
+          "potenza_w": 20956,
           "corrente": "AC",
           "fascia_potenza": "lenta"
         },
         {
           "rank": 3,
-          "id_evse": "IT*ENX*E23XP22T3KKJCK00021*1",
-          "indirizzo": "Via Sebastiano Caboto, 42",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 36.787372,
-          "lon": 14.559051,
-          "potenza_w": 11000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 4,
-          "id_evse": "IT*ENX*E18XP22T3KK4AH00124*1",
-          "indirizzo": "PIAZZA ZAERA, 3",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 38.181152,
-          "lon": 15.548243,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 5,
-          "id_evse": "IT*ENX*E23XP22T3KKJCK00243*1",
-          "indirizzo": "Salvador Allende",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 37.507665,
-          "lon": 13.066708,
-          "potenza_w": 15000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 6,
-          "id_evse": "IT*ENX*E23XP22T3KKJCK00243*2",
-          "indirizzo": "Salvador Allende",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 37.507665,
-          "lon": 13.066708,
-          "potenza_w": 15000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 7,
-          "id_evse": "IT*ENX*E23XP22T3KK4AK524RJ*2",
-          "indirizzo": "Pio La Torre",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 37.337674,
-          "lon": 13.423357,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 8,
-          "id_evse": "IT*ENX*E23XP22T3KK4AK490RJ*2",
-          "indirizzo": "Bartolo Virruso",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 38.055116,
-          "lon": 13.535248,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 9,
-          "id_evse": "IT*ENX*E23XP22T3KK4AM224RJ*2",
-          "indirizzo": "Scaletta",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 37.655795,
-          "lon": 14.523762,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 10,
-          "id_evse": "IT*ENX*E18XP22T5AB5U000321*2",
-          "indirizzo": "VIA CONTESSE",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 38.153761,
-          "lon": 15.531357,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 11,
-          "id_evse": "IT*ENX*E22XP22T3QQ1AN00938*2",
-          "indirizzo": "Vittorio Emanuele",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 37.569223,
-          "lon": 14.903605,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 12,
-          "id_evse": "IT*ENX*E23BZ5126A*3",
-          "indirizzo": "Del Carmine",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 37.927619,
-          "lon": 13.666211,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 13,
-          "id_evse": "IT*ENX*E21XP22T3KK4AM00102*2",
-          "indirizzo": "Via Bottazza, 42",
-          "cpo": "ENEL X WAY ITALIA SRL",
-          "valore": "100.0% in ricarica",
-          "lat": 37.272831,
-          "lon": 14.792566,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
-        },
-        {
-          "rank": 14,
           "id_evse": "IT*ENX*E19XP22T5HK1AG00104*2",
           "indirizzo": "Viale Girolamo Guasto, 7",
           "cpo": "ENEL X WAY ITALIA SRL",
@@ -194,13 +62,145 @@
           "fascia_potenza": "lenta"
         },
         {
-          "rank": 15,
-          "id_evse": "IT*ENX*E22BZ2210A*3",
-          "indirizzo": "Raffaele Failla",
+          "rank": 4,
+          "id_evse": "IT*ENX*E20XP22T3KK1AL00183*1",
+          "indirizzo": "STRADA PROVINCIALE 47 - Parcheggio Eurospin",
           "cpo": "ENEL X WAY ITALIA SRL",
           "valore": "100.0% in ricarica",
-          "lat": 37.211373,
-          "lon": 14.644273,
+          "lat": 37.989625,
+          "lon": 12.948096,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 5,
+          "id_evse": "IT*ENX*E19XP22T3KK4AH00056*2",
+          "indirizzo": "Piazza Simon Bolivar",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 36.888376,
+          "lon": 15.066226,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 6,
+          "id_evse": "IT*ENX*E19XP22T3KK4AH00087*1",
+          "indirizzo": "Strada Provinciale 29, 40",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.808997,
+          "lon": 14.092727,
+          "potenza_w": 20362,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 7,
+          "id_evse": "IT*ENX*E19XP22T3KK4AH00101*1",
+          "indirizzo": "Zona Artigianale, 15",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.781374,
+          "lon": 14.845154,
+          "potenza_w": 20403,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 8,
+          "id_evse": "IT*ENX*E20XP22T3KK1AL00480*1",
+          "indirizzo": "Piazza Giuseppe Garibaldi, 8",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.567742,
+          "lon": 14.279552,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 9,
+          "id_evse": "IT*ENX*E20XP22T3KK1AL00644*1",
+          "indirizzo": "PIAZZA DANTE",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.504359,
+          "lon": 15.081223,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 10,
+          "id_evse": "IT*ENX*E19XP22T3KK4AH00045*1",
+          "indirizzo": "Via Salvatore Incardona, 95",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 36.947397,
+          "lon": 14.504897,
+          "potenza_w": 20362,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 11,
+          "id_evse": "IT*ENX*E19XP22T3KK4AH00045*2",
+          "indirizzo": "Via Salvatore Incardona, 95",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 36.947397,
+          "lon": 14.504897,
+          "potenza_w": 20362,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 12,
+          "id_evse": "IT*ENX*E20XP22T3KK1AL00708*1",
+          "indirizzo": "Federico Paulsen",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 38.099677,
+          "lon": 13.324754,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 13,
+          "id_evse": "IT*ENX*E19XP22T3KK4AD00376*1",
+          "indirizzo": "Caboto",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 38.19358,
+          "lon": 13.332537,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 14,
+          "id_evse": "IT*ENX*E19XP22T3KK4AD00376*2",
+          "indirizzo": "Caboto",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 38.19358,
+          "lon": 13.332537,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 15,
+          "id_evse": "IT*ENX*E19XP22T3KK4AD00495*1",
+          "indirizzo": "VIA ONOREVOLE AGOSTINO MESSANA",
+          "cpo": "ENX",
+          "valore": "100.0% in ricarica",
+          "lat": 37.973339,
+          "lon": 12.957103,
           "potenza_w": 22000,
           "corrente": "AC",
           "fascia_potenza": "lenta"
@@ -213,15 +213,6 @@
       "items": [
         {
           "rank": 1,
-          "id_evse": "IT*IOY*E422101",
-          "indirizzo": "Via Ernesto Basile",
-          "cpo": "IONITY GMBH",
-          "valore": "350.0 kW",
-          "lat": 38.09985,
-          "lon": 13.34618
-        },
-        {
-          "rank": 2,
           "id_evse": "IT*IOY*E422103",
           "indirizzo": "Via Ernesto Basile",
           "cpo": "IONITY GMBH",
@@ -230,13 +221,22 @@
           "lon": 13.34618
         },
         {
-          "rank": 3,
-          "id_evse": "IT*EWI*EHPC161900147*1",
+          "rank": 2,
+          "id_evse": "IT*EWI*EHPC161900147*3",
           "indirizzo": "A19 Palermo - Catania",
           "cpo": "EWIVA SRL",
           "valore": "350.0 kW",
           "lat": 37.571674,
           "lon": 14.479683
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*IOY*E422101",
+          "indirizzo": "Via Ernesto Basile",
+          "cpo": "IONITY GMBH",
+          "valore": "350.0 kW",
+          "lat": 38.09985,
+          "lon": 13.34618
         }
       ]
     }
@@ -474,39 +474,39 @@
       "items": [
         {
           "rank": 1,
-          "id_evse": "IT*ENX*E24BZ1806A*2",
-          "indirizzo": "Statale 115",
+          "id_evse": "IT*ENX*ESN2403181447*2",
+          "indirizzo": "ss14",
           "cpo": "ENEL X WAY ITALIA SRL",
           "valore": "100.0% in ricarica",
-          "lat": 36.787754,
-          "lon": 14.90043,
-          "potenza_w": 90000,
+          "lat": 37.69523,
+          "lon": 15.174086,
+          "potenza_w": 120000,
           "corrente": "DC",
           "fascia_potenza": "ultra"
         },
         {
           "rank": 2,
-          "id_evse": "IT*ENX*E19XP22T3KK1AT00041*1",
-          "indirizzo": "Piazza Stazione 3",
+          "id_evse": "IT*ENX*ESN2403150179*1",
+          "indirizzo": "Malvicino",
           "cpo": "ENEL X WAY ITALIA SRL",
           "valore": "100.0% in ricarica",
-          "lat": 38.147456,
-          "lon": 13.186389,
-          "potenza_w": 14479,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
+          "lat": 38.121786,
+          "lon": 14.721004,
+          "potenza_w": 90000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
         },
         {
           "rank": 3,
-          "id_evse": "IT*ENX*E19XP22T5HK1AG00104*2",
-          "indirizzo": "Viale Girolamo Guasto, 7",
+          "id_evse": "IT*ENX*ESN2403150179*2",
+          "indirizzo": "Malvicino",
           "cpo": "ENEL X WAY ITALIA SRL",
           "valore": "100.0% in ricarica",
-          "lat": 37.64482,
-          "lon": 13.106303,
-          "potenza_w": 22000,
-          "corrente": "AC",
-          "fascia_potenza": "lenta"
+          "lat": 38.121786,
+          "lon": 14.721004,
+          "potenza_w": 90000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
         }
       ]
     },

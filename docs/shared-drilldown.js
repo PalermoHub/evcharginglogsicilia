@@ -171,11 +171,11 @@ window.EVDrilldown = (() => {
       return `<span class="${cls.join(' ')}" ${attrs}><span class="map-legend-dot" style="background:${color}"></span>${label} · <strong${textColor ? ` style="color:${textColor}"` : ''}>${value}</strong></span>`;
     };
 
-    const a22 = counts.a22 || 0;
-    const a22Label = counts.a22Label || 'autostrada';
+    const autostrada = counts.autostrada || 0;
+    const autostradaLabel = counts.autostradaLabel || 'autostrada';
     container.innerHTML = `
       <div class="fw-semibold mb-1"><strong>${totale}</strong> colonnine in totale</div>
-      ${a22 ? `<div class="text-muted small mb-1">di cui <strong>${a22}</strong> in autostrada (${a22Label})</div>` : ''}
+      ${autostrada ? `<div class="text-muted small mb-1">di cui <strong>${autostrada}</strong> in autostrada (${autostradaLabel})</div>` : ''}
       <p class="text-muted small mb-3">Le colonnine stimate sono quelle attive ma di cui non si ha informazione se sono in uso.</p>
       <div class="drilldown-bar-top"></div>
       <div class="drilldown-connector"><svg role="presentation"></svg></div>

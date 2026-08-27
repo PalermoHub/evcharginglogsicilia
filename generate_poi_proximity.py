@@ -8,9 +8,10 @@ Sorgente dei POI: poi_<area>.json (config.POI_FILE), generato una tantum da fetc
 e il perché non si usa dati.trentino.it). Questo script NON interroga
 Overpass: legge solo il file statico già scaricato.
 
-Le colonnine A22 sono escluse (stesso motivo di generate_trends.py: pubblico
-di transito, non urbano — la prossimità a un museo cittadino non è una
-statistica sensata per un'area di servizio autostradale).
+Le colonnine delle autostrade siciliane configurate sono escluse (stesso
+motivo di generate_trends.py: pubblico di transito, non urbano — la
+prossimità a un museo cittadino non è una statistica sensata per un'area
+di servizio autostradale).
 
 Va eseguito una volta al giorno, dopo generate_stats.py.
 """
@@ -55,7 +56,7 @@ def load_latest_city() -> pd.DataFrame:
     table = ds.dataset(str(DATASET), format='parquet', partitioning='hive').to_table().to_pandas()
     table['ts'] = pd.to_datetime(table['ts'], utc=True)
     latest = table.sort_values('ts').drop_duplicates(subset=['id_evse'], keep='last').copy()
-    # Solo l'area configurata (non le zone limitrofe, non l'A22).
+    # Solo l'area configurata (non le zone limitrofe, non le autostrade).
     is_comune = matches_area(latest['citta'], latest['cap'])
     return latest[is_comune]
 

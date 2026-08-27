@@ -20,24 +20,19 @@ Solo le colonnine usage_observable entrano nei calcoli temporali sull'uso
 (stesso motivo di generate_trends.py: real_time da solo non basta, vedi
 usage_semantics.py). Le curiosità "statiche" (che fotografano
 l'ultimo snapshot, es. quota AC/DC) non hanno questo vincolo. Tutte le
-classifiche e i confronti sono limitati alle colonnine cittadine: l'A22 è
-un pubblico diverso (vedi generate_trends.py) e i suoi DC rapidi
-dominerebbero banalmente la classifica potenza travisandola da curiosità
-cittadina.
+classifiche e i confronti sono limitati alle colonnine cittadine: le
+autostrade sono un pubblico diverso (vedi generate_trends.py) e i loro DC
+rapidi dominerebbero banalmente la classifica potenza travisandola da
+curiosità cittadina.
 
-L'A22 (Autostrada del Brennero) è riconoscibile nel dataset solo perché ha
-un prefisso ID e un nome CPO distinguibili, configurati in
-docs/config.json -> confronto_autostrada e letti da config.is_autostrada():
-è un caso specifico di quella autostrada, non un rilevamento generico
-"colonnina autostradale". L'autostrada attraversa decine di comuni ben
-oltre quello configurato, e le colonnine che finiscono in `is_a22` sono
+Le autostrade siciliane configurate (A18/A19/A20/A29, vedi
+docs/config.json -> confronto_autostrada) sono riconoscibili nel dataset
+solo dove hanno un indirizzo/prefisso ID/nome CPO distinguibile, letto da
+config.is_autostrada(): le colonnine che finiscono in `is_autostrada` sono
 solo quelle delle aree di servizio effettivamente intercettate dallo
-scraping (bbox/città del comune configurato) — non "tutta l'A22". Un
-comune vicino a
-un'altra autostrada non avrebbe automaticamente lo stesso confronto: quel
-gestore andrebbe identificato a parte se riconoscibile nei dati, oppure
-individuato per prossimità geografica alle aree di servizio (via OSM) — non
-banale, non ancora fatto qui.
+scraping (bbox/area configurata) — non "tutta la rete autostradale
+siciliana". Un'autostrada priva di segnale riconoscibile nei dati (o un
+gestore non ancora mappato) non comparirebbe affatto in questo confronto.
 
 Va eseguito una volta al giorno, dopo generate_stats.py.
 """
@@ -87,7 +82,7 @@ def power_tier(potenza_w) -> str | None:
 def load_table() -> pd.DataFrame:
     table = ds.dataset(str(DATASET), format='parquet', partitioning='hive').to_table().to_pandas()
     table['ts'] = pd.to_datetime(table['ts'], utc=True)
-    table['is_a22'] = is_autostrada(table['id_evse'], table['cpo'], table['indirizzo'])
+    table['is_autostrada'] = is_autostrada(table['id_evse'], table['cpo'], table['indirizzo'])
     # Solo l'area configurata, non le zone limitrofe che lo scraper
     # raccoglie comunque nel dataset grezzo.
     table['is_comune'] = matches_area(table['citta'], table['cap'])
@@ -122,32 +117,33 @@ def fact_quota_real_time(latest: pd.DataFrame) -> dict | None:
     }
 
 
-def fact_citta_vs_a22(latest: pd.DataFrame) -> dict | None:
-    """Confronto città/A22: compare solo se nel dataset del comune configurato
-    ci sono anche colonnine A22 rilevate (non è detto — dipende da quanto è
-    vicino il comune all'autostrada del Brennero), altrimenti non è calcolabile
-    e la curiosità viene omessa invece di essere scritta a mano.
+def fact_citta_vs_autostrada(latest: pd.DataFrame) -> dict | None:
+    """Confronto città/autostrada: compare solo se nel dataset del comune
+    configurato ci sono anche colonnine autostradali rilevate (non è detto —
+    dipende da quanto è vicino il comune alle autostrade configurate),
+    altrimenti non è calcolabile e la curiosità viene omessa invece di
+    essere scritta a mano.
 
-    Il testo è esplicito sul fatto che non è "tutta l'A22" (che attraversa
-    decine di comuni ben oltre quello configurato) ma solo le aree di
-    servizio effettivamente rilevate qui, e che l'A22 è riconoscibile nei
-    dati (prefisso ID / nome CPO in config.AUTOSTRADA) in un modo che non
-    generalizza ad altre autostrade con altri gestori — vedi nota di
-    modulo più sopra."""
+    Il testo è esplicito sul fatto che non è "tutta la rete autostradale
+    siciliana" ma solo le aree di servizio effettivamente rilevate qui, e
+    che le autostrade configurate sono riconoscibili nei dati (indirizzo /
+    prefisso ID / nome CPO in config.AUTOSTRADA) in un modo che non
+    generalizza automaticamente ad altre autostrade con altri gestori —
+    vedi nota di modulo più sopra."""
     citta = latest[latest['is_comune']]
-    a22 = latest[latest['is_a22']]
-    if citta.empty or a22.empty:
+    autostrada = latest[latest['is_autostrada']]
+    if citta.empty or autostrada.empty:
         return None
     share_citta = round(citta['is_active'].mean() * 100, 1)
-    share_a22 = round(a22['is_active'].mean() * 100, 1)
-    aree = sorted(a22['indirizzo'].dropna().unique())
+    share_autostrada = round(autostrada['is_active'].mean() * 100, 1)
+    aree = sorted(autostrada['indirizzo'].dropna().unique())
     aree_label = ' e '.join(aree) if len(aree) <= 2 else f'{len(aree)} aree di servizio'
     return {
         'titolo': 'Città o autostrada?',
         'testo': (
             f'In questo momento il {share_citta}% delle colonnine di {AREA_NOME} è attivo, contro il '
-            f'{share_a22}% di quelle rilevate su {aree_label} ({AUTOSTRADA_LABEL}): pubblici diversi, andamenti diversi. '
-            'È un confronto possibile solo perché la A22 è riconoscibile nei dati (operatore e ID dedicati); '
+            f'{share_autostrada}% di quelle rilevate su {aree_label} ({AUTOSTRADA_LABEL}): pubblici diversi, andamenti diversi. '
+            'È un confronto possibile solo perché queste colonnine autostradali sono riconoscibili nei dati (operatore e/o indirizzo dedicati); '
             'colonnine di altre autostrade, con altri gestori, non lo sarebbero allo stesso modo.'
         ),
     }
@@ -206,7 +202,7 @@ def classifica_uso(rt_city: pd.DataFrame, days: int) -> dict | None:
 def per_operatore(rt_city: pd.DataFrame) -> dict:
     """Per ogni operatore con almeno una colonnina real-time cittadina, le
     sue 3 colonnine più usate. Operatori senza dati real-time (può
-    succedere, come per l'A22) non compaiono — non c'è nulla da mostrare."""
+    succedere, come per le autostrade) non compaiono — non c'è nulla da mostrare."""
     result = {}
     for cpo, g in rt_city.groupby(rt_city['cpo'].fillna('Sconosciuto')):
         items = _classifica_per_colonnina(g, 3)
@@ -314,7 +310,7 @@ def main() -> None:
     candidati = [
         fact_quota_ac_dc(latest),
         fact_quota_real_time(latest),
-        fact_citta_vs_a22(latest),
+        fact_citta_vs_autostrada(latest),
         fact_ora_punta_ricarica(rt, days),
         fact_giorno_settimana_top(rt, days),
         fact_poi_vicine(),

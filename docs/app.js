@@ -30,7 +30,7 @@ let map;
 let allPoints = [];
 let stationsUsage = null;
 let comuneLabel = 'Trento'; // sovrascritto da EVConfig.ready in loadDashboard()
-let autostradaLabel = null; // sovrascritto da EVConfig.ready in loadDashboard() (es. "A22", "A19")
+let autostradaLabel = null; // sovrascritto da EVConfig.ready in loadDashboard() (es. "A18/A19/A20/A29")
 let lastGeneratedAt = null; // sovrascritto in loadDashboard(), riusato da applyFilters()
 
 // --- Fly-to tabella -> mappa ---------------------------------------------
@@ -466,10 +466,10 @@ function renderColonnineTotali() {
   // tutti gli altri segmenti, impedendo di usarlo per aggiungerne un altro
   // o per confrontarlo con le altre categorie mentre è filtrato.
   const basePoints = allPoints.filter((p) => pointMatchesFilters(p, 'stato'));
-  const a22 = basePoints.filter((p) => p.is_a22).length;
+  const autostrada = basePoints.filter((p) => p.is_autostrada).length;
   window.EVDrilldown.render(
     el,
-    { ...summarize(basePoints), a22, a22Label: autostradaLabel },
+    { ...summarize(basePoints), autostrada, autostradaLabel },
     { selected: activeFilters.stato, onToggle: toggleStatoFilter }
   );
 }
@@ -554,7 +554,7 @@ function renderTable(items) {
       return `
         <tr data-id-evse="${item.id_evse}">
           <td data-sort-value="${STATE_SORT_RANK[state.label]}"><span class="badge rounded-pill badge-state ${state.cls}">${state.label}</span></td>
-          <td>${item.cpo || '—'}${item.is_a22 ? ` <span class="badge bg-warning text-dark ms-1">${autostradaLabel || 'autostrada'}</span>` : ''}</td>
+          <td>${item.cpo || '—'}${item.is_autostrada ? ` <span class="badge bg-warning text-dark ms-1">${autostradaLabel || 'autostrada'}</span>` : ''}</td>
           <td>${item.citta || comuneLabel}</td>
           <td data-sort-value="${item.potenza_w || 0}">${item.potenza_w ? `${item.potenza_w / 1000} kW` : '—'}</td>
           <td>${connectorLabel(item.standard_connettore)}${item.n_connettori > 1 ? ` ×${item.n_connettori}` : ''}</td>
@@ -676,7 +676,7 @@ function popupHtml(point) {
   const address = point.indirizzo || '—';
   const mapsUrl = directionsUrl(point);
   const addressHtml = mapsUrl ? `<a href="${mapsUrl}" target="_blank" rel="noopener">${address}</a>` : address;
-  return `<strong>${point.cpo || 'Operatore'}</strong>${point.is_a22 ? ` <span class="badge bg-warning text-dark">${autostradaLabel || 'autostrada'}</span>` : ''}<br>${addressHtml}<br>Stato: ${label}<br><span class="text-muted small">${point.id_evse}</span>${EVUsage.stationHtml(point.id_evse, { usageObservable: point.usage_observable })}`;
+  return `<strong>${point.cpo || 'Operatore'}</strong>${point.is_autostrada ? ` <span class="badge bg-warning text-dark">${autostradaLabel || 'autostrada'}</span>` : ''}<br>${addressHtml}<br>Stato: ${label}<br><span class="text-muted small">${point.id_evse}</span>${EVUsage.stationHtml(point.id_evse, { usageObservable: point.usage_observable })}`;
 }
 
 // Un popup aperto vicino al bordo della mappa può sconfinare fuori
@@ -715,7 +715,7 @@ function ensurePopupVisible(popup, attempt = 0) {
   });
 }
 
-// --- Mappa: cluster per attive/non attive, punti singoli per in-uso/A22 -
+// --- Mappa: cluster per attive/non attive, punti singoli per in-uso/autostrada -
 
 function toGeoJSON(points) {
   return {
@@ -1109,12 +1109,12 @@ function createMap() {
 function renderMapLayers(points) {
   if (!map) return;
 
-  // Nessuno split per is_a22 qui, né altrove: l'A22 è trattata come
-  // qualunque altra colonnina in mappa, gauge, stacked bar, riepilogo e
-  // tabella, colorata solo in base a stato/occupazione osservabile
-  // (isKnownOccupancy). La sola distinzione mostrata è il conteggio "di cui
-  // N in autostrada (A22)" nel riquadro "Colonnine totali" (vedi
-  // renderColonnineTotali/shared-drilldown.js).
+  // Nessuno split per is_autostrada qui, né altrove: le colonnine
+  // autostradali sono trattate come qualunque altra in mappa, gauge,
+  // stacked bar, riepilogo e tabella, colorate solo in base a
+  // stato/occupazione osservabile (isKnownOccupancy). La sola distinzione
+  // mostrata è il conteggio "di cui N in autostrada" nel riquadro
+  // "Colonnine totali" (vedi renderColonnineTotali/shared-drilldown.js).
   const chargingPoints = points.filter((p) => p.stato_raw === 'CHARGING');
   const activeKnownPoints = points.filter(
     (p) => pointState(p) === 'Attivo' && p.stato_raw !== 'CHARGING' && isKnownOccupancy(p)

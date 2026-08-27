@@ -2,11 +2,13 @@
 generate_trends.py — Precalcola l'andamento nel tempo (uso/disponibilità)
 delle colonnine cittadine del comune monitorato (vedi config.py).
 
-Le colonnine dell'autostrada A22 sono escluse a monte, non solo filtrate:
-sono per il traffico di transito, non per l'utenza urbana, e nessun
-operatore autostradale pubblica oggi lo stato in tempo reale necessario per
-costruire un andamento. Restano visibili su mappa live, card dedicata e
-tabella A22 della pagina statistiche — solo qui non compaiono.
+Le colonnine delle autostrade siciliane configurate (vedi
+docs/config.json -> confronto_autostrada) sono escluse a monte, non solo
+filtrate: sono per il traffico di transito, non per l'utenza urbana, e
+nessun operatore autostradale pubblica oggi lo stato in tempo reale
+necessario per costruire un andamento. Restano visibili su mappa live,
+card dedicata e tabella autostrada della pagina statistiche — solo qui non
+compaiono.
 
 Genera tre blocchi via via più esigenti in storico:
   andamento_giornaliero  (serve >=2 giorni)
@@ -63,7 +65,7 @@ def load_city_table() -> pd.DataFrame:
     charging_cpos = cpos_with_charging(table)
     table['usage_observable'] = usage_observable(table, charging_cpos)
     # Solo l'area configurata (non le zone limitrofe che lo scraper
-    # raccoglie comunque), e non l'A22 (pubblico diverso, gestito a parte).
+    # raccoglie comunque), e non le autostrade (pubblico diverso, gestite a parte).
     is_comune = matches_area(table['citta'], table['cap'])
     table['is_active'] = table['stato'].eq('Attivo')
     return table[is_comune].copy()

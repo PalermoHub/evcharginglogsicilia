@@ -4,7 +4,7 @@ esistono/sono attive): sessioni di ricarica, fasce orarie più piene,
 durata media, giorno record. Per singola colonnina (per il popup della
 mappa) e aggregato città.
 
-Solo il comune configurato (non i comuni limitrofi, non l'A22 — vedi
+Solo il comune configurato (non i comuni limitrofi, non le autostrade — vedi
 generate_trends.py per lo stesso criterio) e solo colonnine usage_observable
 (vedi usage_semantics.py): per le altre lo stato è statico, o l'operatore
 non distingue occupata da libera, e non esiste una "sessione" da rilevare.

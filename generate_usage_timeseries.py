@@ -13,7 +13,7 @@ colore duplicate in docs/app.js e docs/stats/app.js).
 
 Solo colonnine cittadine usage_observable (le altre non hanno una
 "sessione" da rilevare, vedi generate_station_usage.py e
-usage_semantics.py) e non A22 (stesso motivo di generate_trends.py:
+usage_semantics.py) e non le autostrade (stesso motivo di generate_trends.py:
 pubblico di transito, non urbano).
 
 Va eseguito dopo generate_station_usage.py e generate_poi_proximity.py

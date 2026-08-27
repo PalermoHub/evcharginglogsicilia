@@ -24,12 +24,12 @@ def main() -> None:
     latest['stato'] = latest['stato'].fillna('Sconosciuto')
     latest['stato_raw'] = latest['stato_raw'].fillna('UNKNOWN')
     latest['usage_observable'] = usage_observable(latest, charging_cpos)
-    latest['is_a22'] = is_autostrada(latest['id_evse'], latest['cpo'], latest['indirizzo'])
-    # Solo l'area configurata (mappa/tabella live) + A22 (caso a sé, resta
-    # visibile): le zone limitrofe che lo scraper raccoglie comunque nel
-    # dataset grezzo non compaiono qui.
+    latest['is_autostrada'] = is_autostrada(latest['id_evse'], latest['cpo'], latest['indirizzo'])
+    # Solo l'area configurata (mappa/tabella live) + autostrade siciliane
+    # (caso a sé, restano visibili): le zone limitrofe che lo scraper
+    # raccoglie comunque nel dataset grezzo non compaiono qui.
     is_comune = matches_area(latest['citta'], latest['cap'])
-    latest = latest[is_comune | latest['is_a22']]
+    latest = latest[is_comune | latest['is_autostrada']]
 
     active = int((latest['stato'] == 'Attivo').sum())
     inactive = int((latest['stato'] == 'Non Attivo').sum())
@@ -62,7 +62,7 @@ def main() -> None:
                 'n_connettori': int(row['n_connettori']) if pd.notna(row['n_connettori']) else None,
                 'open_24h7': bool(row['open_24h7']) if pd.notna(row['open_24h7']) else None,
                 'party_id': row['party_id'],
-                'is_a22': bool(row['is_a22']),
+                'is_autostrada': bool(row['is_autostrada']),
             }
             for _, row in latest.iterrows()
         ],
