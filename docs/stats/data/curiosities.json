@@ -1,0 +1,834 @@
+{
+  "generated_at": "2026-08-27T07:16:59.525038+00:00",
+  "days_collected": 2,
+  "curiosita": [
+    {
+      "titolo": "Corrente alternata o continua?",
+      "testo": "Il 23.8% delle colonnine di Sicilia eroga corrente continua (DC, ricarica rapida); il resto è AC."
+    },
+    {
+      "titolo": "Quanto è \"live\" lo stato che vedi",
+      "testo": "Solo il 91.4% delle colonnine comunica lo stato in tempo reale: per le altre, il pallino verde o rosso che vedi è l'ultima informazione statica pubblicata dal gestore."
+    },
+    {
+      "titolo": "Città o autostrada?",
+      "testo": "In questo momento il 67.2% delle colonnine di Sicilia è attivo, contro il 30.8% di quelle rilevate su A19 Palermo - Catania e A19 Palermo - Catania Pa/Ct (A19): pubblici diversi, andamenti diversi. È un confronto possibile solo perché la A22 è riconoscibile nei dati (operatore e ID dedicati); colonnine di altre autostrade, con altri gestori, non lo sarebbero allo stesso modo."
+    },
+    {
+      "titolo": "Colonnine e città",
+      "testo": "Il 47.0% delle colonnine cittadine si trova entro 300 m da un supermercato."
+    }
+  ],
+  "top3": {
+    "uso": {
+      "titolo": "Le colonnine più usate",
+      "descrizione": "Quota di tempo in ricarica, su 2 giorni di storico raccolto.",
+      "days_collected": 2,
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*ENX*E23XP22T3KKJCK00159*2",
+          "indirizzo": "Gazometro",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 38.206906,
+          "lon": 15.561313,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*ENX*E18XP22T5AB5U000182*2",
+          "indirizzo": "Piazza Tenente Schicchi, 16",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.932336,
+          "lon": 14.090043,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*ENX*E23XP22T3KKJCK00021*1",
+          "indirizzo": "Via Sebastiano Caboto, 42",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 36.787372,
+          "lon": 14.559051,
+          "potenza_w": 11000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 4,
+          "id_evse": "IT*ENX*E18XP22T3KK4AH00124*1",
+          "indirizzo": "PIAZZA ZAERA, 3",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 38.181152,
+          "lon": 15.548243,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 5,
+          "id_evse": "IT*ENX*E23XP22T3KKJCK00243*1",
+          "indirizzo": "Salvador Allende",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.507665,
+          "lon": 13.066708,
+          "potenza_w": 15000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 6,
+          "id_evse": "IT*ENX*E23XP22T3KKJCK00243*2",
+          "indirizzo": "Salvador Allende",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.507665,
+          "lon": 13.066708,
+          "potenza_w": 15000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 7,
+          "id_evse": "IT*ENX*E23XP22T3KK4AK524RJ*2",
+          "indirizzo": "Pio La Torre",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.337674,
+          "lon": 13.423357,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 8,
+          "id_evse": "IT*ENX*E23XP22T3KK4AK490RJ*2",
+          "indirizzo": "Bartolo Virruso",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 38.055116,
+          "lon": 13.535248,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 9,
+          "id_evse": "IT*ENX*E23XP22T3KK4AM224RJ*2",
+          "indirizzo": "Scaletta",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.655795,
+          "lon": 14.523762,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 10,
+          "id_evse": "IT*ENX*E18XP22T5AB5U000321*2",
+          "indirizzo": "VIA CONTESSE",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 38.153761,
+          "lon": 15.531357,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 11,
+          "id_evse": "IT*ENX*E22XP22T3QQ1AN00938*2",
+          "indirizzo": "Vittorio Emanuele",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.569223,
+          "lon": 14.903605,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 12,
+          "id_evse": "IT*ENX*E23BZ5126A*3",
+          "indirizzo": "Del Carmine",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.927619,
+          "lon": 13.666211,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 13,
+          "id_evse": "IT*ENX*E21XP22T3KK4AM00102*2",
+          "indirizzo": "Via Bottazza, 42",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.272831,
+          "lon": 14.792566,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 14,
+          "id_evse": "IT*ENX*E19XP22T5HK1AG00104*2",
+          "indirizzo": "Viale Girolamo Guasto, 7",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.64482,
+          "lon": 13.106303,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 15,
+          "id_evse": "IT*ENX*E22BZ2210A*3",
+          "indirizzo": "Raffaele Failla",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.211373,
+          "lon": 14.644273,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    },
+    "potenza": {
+      "titolo": "Le colonnine più potenti",
+      "descrizione": "Potenza massima del connettore principale, dall'ultimo snapshot.",
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*IOY*E422101",
+          "indirizzo": "Via Ernesto Basile",
+          "cpo": "IONITY GMBH",
+          "valore": "350.0 kW",
+          "lat": 38.09985,
+          "lon": 13.34618
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*IOY*E422103",
+          "indirizzo": "Via Ernesto Basile",
+          "cpo": "IONITY GMBH",
+          "valore": "350.0 kW",
+          "lat": 38.09985,
+          "lon": 13.34618
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*EWI*EHPC161900147*1",
+          "indirizzo": "A19 Palermo - Catania",
+          "cpo": "EWIVA SRL",
+          "valore": "350.0 kW",
+          "lat": 37.571674,
+          "lon": 14.479683
+        }
+      ]
+    }
+  },
+  "per_operatore": {
+    "ACEA ENERGIA": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2250700663*1",
+          "indirizzo": "Via Vallona, 5",
+          "cpo": "ACEA ENERGIA",
+          "valore": "100.0% in ricarica",
+          "lat": 38.021209,
+          "lon": 12.519441,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2250700668*2",
+          "indirizzo": "Lungomare Dante Alighieri, 46",
+          "cpo": "ACEA ENERGIA",
+          "valore": "40.7% in ricarica",
+          "lat": 38.018603,
+          "lon": 12.513018,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2250700664*2",
+          "indirizzo": "Via Vallona, 5",
+          "cpo": "ACEA ENERGIA",
+          "valore": "35.2% in ricarica",
+          "lat": 38.02125,
+          "lon": 12.51958,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    },
+    "ATE": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*ATE*E00780*2",
+          "indirizzo": "Viale Giostra 15",
+          "cpo": "ATE",
+          "valore": "9.3% in ricarica",
+          "lat": 38.207807,
+          "lon": 15.555409,
+          "potenza_w": 60000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*ATE*E00780*1",
+          "indirizzo": "Viale Giostra 15",
+          "cpo": "ATE",
+          "valore": "0.0% in ricarica",
+          "lat": 38.207807,
+          "lon": 15.555409,
+          "potenza_w": 60000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        }
+      ]
+    },
+    "Atlante S.r.l": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*ATE*E00781*2",
+          "indirizzo": "Strada Statale 114 114",
+          "cpo": "Atlante S.r.l",
+          "valore": "14.8% in ricarica",
+          "lat": 38.133908,
+          "lon": 15.522075,
+          "potenza_w": 60000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*ATE*E00153*2",
+          "indirizzo": "Contrada Poggio Funci 1",
+          "cpo": "Atlante S.r.l",
+          "valore": "9.3% in ricarica",
+          "lat": 37.352261,
+          "lon": 13.615121,
+          "potenza_w": 50000,
+          "corrente": "DC",
+          "fascia_potenza": "rapida"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*ATE*E00153*1",
+          "indirizzo": "Contrada Poggio Funci 1",
+          "cpo": "Atlante S.r.l",
+          "valore": "1.9% in ricarica",
+          "lat": 37.352261,
+          "lon": 13.615121,
+          "potenza_w": 50000,
+          "corrente": "DC",
+          "fascia_potenza": "rapida"
+        }
+      ]
+    },
+    "BEC": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*PLN*EE003978*2",
+          "indirizzo": "Piazza Valdesi",
+          "cpo": "BEC",
+          "valore": "100.0% in ricarica",
+          "lat": 38.197035,
+          "lon": 13.331202,
+          "potenza_w": 22144,
+          "corrente": "AC",
+          "fascia_potenza": "rapida"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*PLN*EE002624*2",
+          "indirizzo": "Viale Leonardo Sciascia, 45",
+          "cpo": "BEC",
+          "valore": "100.0% in ricarica",
+          "lat": 37.278562,
+          "lon": 13.609105,
+          "potenza_w": 22144,
+          "corrente": "AC",
+          "fascia_potenza": "rapida"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*PLN*EE003130*1",
+          "indirizzo": "Via Onorevole Calogero Volpe, 13",
+          "cpo": "BEC",
+          "valore": "64.8% in ricarica",
+          "lat": 37.454861,
+          "lon": 13.882592,
+          "potenza_w": 22144,
+          "corrente": "AC",
+          "fascia_potenza": "rapida"
+        }
+      ]
+    },
+    "DUFERCO MOBILITY SRL": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*DUF*EP0002*1",
+          "indirizzo": "Via John Fitzgerald Kennedy, 37",
+          "cpo": "DUFERCO MOBILITY SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.619866,
+          "lon": 15.161825,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*DUF*EP0001*2",
+          "indirizzo": "Via G. Pezzana",
+          "cpo": "DUFERCO MOBILITY SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.544587,
+          "lon": 15.143313,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*DUF*EP0011*2",
+          "indirizzo": "Via Lungomare Bucalo Centro",
+          "cpo": "DUFERCO MOBILITY SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.945407,
+          "lon": 15.368847,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    },
+    "EMOBITALY S.r.l.": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*EMOE1109",
+          "indirizzo": "Viale delle Americhe, 143",
+          "cpo": "EMOBITALY S.r.l.",
+          "valore": "31.5% in ricarica",
+          "lat": 36.930397,
+          "lon": 14.691776,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*EMO*E2380*1",
+          "indirizzo": "Via Luigi Russo, 6",
+          "cpo": "EMOBITALY S.r.l.",
+          "valore": "3.7% in ricarica",
+          "lat": 37.490481,
+          "lon": 14.03313,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*EMO*E2373*1",
+          "indirizzo": "Via Luigi Russo, 6",
+          "cpo": "EMOBITALY S.r.l.",
+          "valore": "0.0% in ricarica",
+          "lat": 37.490481,
+          "lon": 14.03313,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    },
+    "ENEL X WAY ITALIA SRL": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*ENX*E24BZ1806A*2",
+          "indirizzo": "Statale 115",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 36.787754,
+          "lon": 14.90043,
+          "potenza_w": 90000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*ENX*E19XP22T3KK1AT00041*1",
+          "indirizzo": "Piazza Stazione 3",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 38.147456,
+          "lon": 13.186389,
+          "potenza_w": 14479,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*ENX*E19XP22T5HK1AG00104*2",
+          "indirizzo": "Viale Girolamo Guasto, 7",
+          "cpo": "ENEL X WAY ITALIA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.64482,
+          "lon": 13.106303,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    },
+    "ENX": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*ENX*E19XP22T3KK4AD00495*1",
+          "indirizzo": "VIA ONOREVOLE AGOSTINO MESSANA",
+          "cpo": "ENX",
+          "valore": "100.0% in ricarica",
+          "lat": 37.973339,
+          "lon": 12.957103,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*ENX*ESN2403181449*2",
+          "indirizzo": "Sandro Pertini",
+          "cpo": "ENX",
+          "valore": "100.0% in ricarica",
+          "lat": 38.17088,
+          "lon": 15.271773,
+          "potenza_w": 90000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*ENX*E23XK11T2J03BF00577*1",
+          "indirizzo": "Faro Giudecca",
+          "cpo": "ENX",
+          "valore": "85.2% in ricarica",
+          "lat": 38.040388,
+          "lon": 14.02918,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    },
+    "EWIVA SRL": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*EWI*EEW020602*2",
+          "indirizzo": "Strada Statale 115",
+          "cpo": "EWIVA SRL",
+          "valore": "100.0% in ricarica",
+          "lat": 37.924361,
+          "lon": 12.545944,
+          "potenza_w": 150000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*EWI*EEW0077S1*1",
+          "indirizzo": "Viale Leonardo Da Vinci, 25",
+          "cpo": "EWIVA SRL",
+          "valore": "94.4% in ricarica",
+          "lat": 36.919532,
+          "lon": 14.727956,
+          "potenza_w": 100000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*EWI*EEW020602*1",
+          "indirizzo": "Strada Statale 115",
+          "cpo": "EWIVA SRL",
+          "valore": "90.7% in ricarica",
+          "lat": 37.924361,
+          "lon": 12.545944,
+          "potenza_w": 150000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        }
+      ]
+    },
+    "Edison Next S.P.A.": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "ITEDNE0250*01*3",
+          "indirizzo": "Contrada Spalla, Strada provinciale ex ss114 snc",
+          "cpo": "Edison Next S.P.A.",
+          "valore": "9.3% in ricarica",
+          "lat": 37.114599,
+          "lon": 15.232482,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 2,
+          "id_evse": "ITEDNE0040*01*2",
+          "indirizzo": "Via E. Biagi  8",
+          "cpo": "Edison Next S.P.A.",
+          "valore": "0.0% in ricarica",
+          "lat": 38.156833,
+          "lon": 13.32,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 3,
+          "id_evse": "ITEDNE0040*01*1",
+          "indirizzo": "Via E. Biagi  8",
+          "cpo": "Edison Next S.P.A.",
+          "valore": "0.0% in ricarica",
+          "lat": 38.156833,
+          "lon": 13.32,
+          "potenza_w": 22000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    },
+    "Go Electric Stations SRLS": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "ITGESE806481012",
+          "indirizzo": "Via Giuseppe Garibaldi",
+          "cpo": "Go Electric Stations SRLS",
+          "valore": "100.0% in ricarica",
+          "lat": 37.607064,
+          "lon": 15.097031,
+          "potenza_w": 11000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 2,
+          "id_evse": "ITGESE806479647",
+          "indirizzo": "Via Giuseppe Garibaldi, 68 (Largo Sapienza)",
+          "cpo": "Go Electric Stations SRLS",
+          "valore": "100.0% in ricarica",
+          "lat": 37.607016,
+          "lon": 15.097019,
+          "potenza_w": 11000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 3,
+          "id_evse": "ITGESE830962548",
+          "indirizzo": "Via Gaetano Mario Columba 29",
+          "cpo": "Go Electric Stations SRLS",
+          "valore": "100.0% in ricarica",
+          "lat": 37.069349,
+          "lon": 15.271861,
+          "potenza_w": 11000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    },
+    "IONITY GMBH": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*IOY*E422102",
+          "indirizzo": "Via Ernesto Basile",
+          "cpo": "IONITY GMBH",
+          "valore": "25.9% in ricarica",
+          "lat": 38.09985,
+          "lon": 13.34618,
+          "potenza_w": 350000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*IOY*E422101",
+          "indirizzo": "Via Ernesto Basile",
+          "cpo": "IONITY GMBH",
+          "valore": "24.1% in ricarica",
+          "lat": 38.09985,
+          "lon": 13.34618,
+          "potenza_w": 350000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*IOY*E422104",
+          "indirizzo": "Via Ernesto Basile",
+          "cpo": "IONITY GMBH",
+          "valore": "16.7% in ricarica",
+          "lat": 38.09985,
+          "lon": 13.34618,
+          "potenza_w": 250000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        }
+      ]
+    },
+    "Plenitude On The Road S.r.l.": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*PLN*EE002818*2",
+          "indirizzo": "Via Napoli, 35",
+          "cpo": "Plenitude On The Road S.r.l.",
+          "valore": "100.0% in ricarica",
+          "lat": 36.829901,
+          "lon": 11.94236,
+          "potenza_w": 22144,
+          "corrente": "AC",
+          "fascia_potenza": "rapida"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*PLN*EE003987*1",
+          "indirizzo": "Via Enrico Fileti, 4",
+          "cpo": "Plenitude On The Road S.r.l.",
+          "valore": "44.4% in ricarica",
+          "lat": 38.143734,
+          "lon": 13.364711,
+          "potenza_w": 22144,
+          "corrente": "AC",
+          "fascia_potenza": "rapida"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*PLN*EE004764*1",
+          "indirizzo": "Via Michelangelo",
+          "cpo": "Plenitude On The Road S.r.l.",
+          "valore": "42.6% in ricarica",
+          "lat": 37.637534,
+          "lon": 14.404954,
+          "potenza_w": 22144,
+          "corrente": "AC",
+          "fascia_potenza": "rapida"
+        }
+      ]
+    },
+    "Tesla Italia Srl.": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*TSL*E000AD2",
+          "indirizzo": "1, Via Salvatore Quasimodo",
+          "cpo": "Tesla Italia Srl.",
+          "valore": "74.1% in ricarica",
+          "lat": 37.551441,
+          "lon": 15.06703,
+          "potenza_w": 250000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*TSL*E0E3D4V",
+          "indirizzo": "1, Via Salvatore Quasimodo",
+          "cpo": "Tesla Italia Srl.",
+          "valore": "53.7% in ricarica",
+          "lat": 37.551441,
+          "lon": 15.06703,
+          "potenza_w": 250000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*TSL*E0E3D4T",
+          "indirizzo": "1, Via Salvatore Quasimodo",
+          "cpo": "Tesla Italia Srl.",
+          "valore": "40.7% in ricarica",
+          "lat": 37.551441,
+          "lon": 15.06703,
+          "potenza_w": 250000,
+          "corrente": "DC",
+          "fascia_potenza": "ultra"
+        }
+      ]
+    },
+    "TheF Charging S.r.l.": {
+      "items": [
+        {
+          "rank": 1,
+          "id_evse": "IT*PWY*EC0160*02*02",
+          "indirizzo": "Via Salvatore Quasimodo, 1",
+          "cpo": "TheF Charging S.r.l.",
+          "valore": "100.0% in ricarica",
+          "lat": 37.551937,
+          "lon": 15.066813,
+          "potenza_w": 11000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 2,
+          "id_evse": "IT*PWY*EC0160*02*01",
+          "indirizzo": "Via Salvatore Quasimodo, 1",
+          "cpo": "TheF Charging S.r.l.",
+          "valore": "0.0% in ricarica",
+          "lat": 37.551937,
+          "lon": 15.066813,
+          "potenza_w": 11000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        },
+        {
+          "rank": 3,
+          "id_evse": "IT*PWY*EL0091*01*01",
+          "indirizzo": "Contrada Rais Gerbi",
+          "cpo": "TheF Charging S.r.l.",
+          "valore": "0.0% in ricarica",
+          "lat": 38.024562,
+          "lon": 14.148676,
+          "potenza_w": 15000,
+          "corrente": "AC",
+          "fascia_potenza": "lenta"
+        }
+      ]
+    }
+  }
+}
