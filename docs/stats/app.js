@@ -155,57 +155,163 @@ function renderMonitorabiliSection(block) {
   [fromInput, toInput].forEach((input) => input && input.addEventListener('change', applyMonitorabiliFilter));
 }
 
-// --- Filtri condivisi (potenza / operatore / POI) -------------------------
+// --- Filtri sfaccettati (potenza / operatore / POI) ------------------------
+//
+// Stesso meccanismo di docs/app.js (vedi commento lì per il dettaglio):
+// dentro una sfaccettatura i valori selezionati sono in OR, tra
+// sfaccettature diverse in AND, i conteggi di ogni opzione sono calcolati
+// sul sottoinsieme che rispetta già tutti gli ALTRI filtri attivi
+// (interconnessione), nessuna selezione = nessun filtro su quella
+// dimensione. Qui "values(row)" può restituire più di un valore per riga
+// (una riga d'uso è vicina a più POI insieme) — a differenza delle
+// sfaccettature di docs/app.js che ne hanno sempre uno solo.
+const POWER_TIER_LABELS = { lenta: '≤22 kW', rapida: '22–50 kW', ultra: '>50 kW' };
 
-const usageFilters = { tier: 'tutte', operator: '', poiCategory: '' };
+const USAGE_FACETS = [
+  { key: 'potenza', title: 'Fascia di potenza', values: (r) => (r.fascia_potenza ? [r.fascia_potenza] : []), label: (v) => POWER_TIER_LABELS[v] || v },
+  { key: 'operatore', title: 'Operatore', values: (r) => (r.cpo ? [r.cpo] : []), label: (v) => v },
+  { key: 'poi', title: 'Vicino a', values: (r) => r.poi_categorie || [], label: (v) => CATEGORY_LABELS[v] || v },
+];
+
+const usageActiveFilters = Object.fromEntries(USAGE_FACETS.map((f) => [f.key, new Set()]));
+const usageFacetSearchTerms = {};
+let expandedUsageFacetKey = null;
 let granularity = 'giorno';
 
-function filterRows(rows) {
-  return rows.filter((r) => {
-    if (usageFilters.tier !== 'tutte' && r.fascia_potenza !== usageFilters.tier) return false;
-    if (usageFilters.operator && r.cpo !== usageFilters.operator) return false;
-    if (usageFilters.poiCategory && !r.poi_categorie.includes(usageFilters.poiCategory)) return false;
-    return true;
+function usageRowMatchesFilters(row, exceptKey) {
+  return USAGE_FACETS.every((facet) => {
+    if (facet.key === exceptKey) return true;
+    const selected = usageActiveFilters[facet.key];
+    if (selected.size === 0) return true;
+    return facet.values(row).some((v) => selected.has(v));
   });
 }
 
-function populateFilterOptions(rows) {
-  const operatorSelect = document.getElementById('usage-operator-filter');
-  const poiSelect = document.getElementById('usage-poi-filter');
-  if (operatorSelect) {
-    const operators = Array.from(new Set(rows.map((r) => r.cpo))).sort((a, b) => a.localeCompare(b, 'it'));
-    operatorSelect.innerHTML = '<option value="">Tutti</option>' + operators.map((o) => `<option value="${o}">${o}</option>`).join('');
-  }
-  if (poiSelect) {
-    poiSelect.innerHTML = '<option value="">Ovunque</option>' + Object.entries(CATEGORY_LABELS)
-      .map(([key, label]) => `<option value="${key}">${label}</option>`)
-      .join('');
-  }
+function filterRows(rows) {
+  return rows.filter((r) => usageRowMatchesFilters(r, null));
 }
 
-function wireUsageFilters() {
-  const buttons = Array.from(document.querySelectorAll('#usage-power-filter button'));
-  buttons.forEach((btn) => {
+function buildUsageFacetOptions(facet) {
+  const base = usageTimeseriesRows.filter((r) => usageRowMatchesFilters(r, facet.key));
+  const counts = new Map();
+  base.forEach((r) => {
+    facet.values(r).forEach((v) => counts.set(v, (counts.get(v) || 0) + 1));
+  });
+  return Array.from(counts.entries())
+    .map(([value, count]) => ({ value, label: facet.label(value), count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'it'));
+}
+
+function summarizeUsageValues(labels, max = 3) {
+  if (labels.length <= max) return labels.join(', ');
+  return `${labels.slice(0, max).join(', ')} e altri ${labels.length - max}`;
+}
+
+function updateUsageFiltersSummary() {
+  const el = document.getElementById('usage-filters-summary');
+  if (!el) return;
+  const parts = USAGE_FACETS.filter((f) => usageActiveFilters[f.key].size > 0).map((f) => {
+    const labels = Array.from(usageActiveFilters[f.key]).map((v) => f.label(v));
+    return `${f.title}: ${summarizeUsageValues(labels)}`;
+  });
+  const shown = filterRows(usageTimeseriesRows).length;
+  el.textContent =
+    parts.length === 0
+      ? "Nessun filtro attivo — vengono mostrati tutti i dati d'uso."
+      : `${parts.join(' · ')} — ${shown} di ${usageTimeseriesRows.length} righe mostrate.`;
+}
+
+function renderUsageFilters() {
+  const panel = document.getElementById('usage-filters-panel');
+  if (!panel) return;
+
+  const tabsHtml = USAGE_FACETS.map((facet) => {
+    const selected = usageActiveFilters[facet.key];
+    const isOpen = facet.key === expandedUsageFacetKey;
+    return `
+      <button type="button" class="filter-tab ${selected.size ? 'has-active' : ''} ${isOpen ? 'is-open' : ''}"
+        data-usage-facet-toggle="${facet.key}" aria-expanded="${isOpen}">
+        <span>${facet.title}</span>
+        ${selected.size ? `<span class="count-badge">${selected.size}</span>` : ''}
+      </button>`;
+  }).join('');
+
+  const openFacet = USAGE_FACETS.find((f) => f.key === expandedUsageFacetKey);
+  let bodyHtml = '';
+  if (openFacet) {
+    const options = buildUsageFacetOptions(openFacet);
+    const selected = usageActiveFilters[openFacet.key];
+    const showSearch = options.length > 8;
+    const optionsHtml = options.length
+      ? options
+          .map((opt, i) => {
+            const id = `usage-facet-${openFacet.key}-${i}`;
+            const isSelected = selected.has(opt.value);
+            const isZero = opt.count === 0 && !isSelected;
+            const rowClass = [isSelected && 'is-selected', isZero && 'is-zero'].filter(Boolean).join(' ');
+            return `
+              <div class="filter-facet-option ${rowClass}" data-search-text="${opt.label.toLowerCase()}">
+                <input type="checkbox" class="form-check-input" id="${id}" data-usage-facet="${openFacet.key}"
+                  data-value="${encodeURIComponent(opt.value)}" ${isSelected ? 'checked' : ''} ${isZero ? 'disabled' : ''}>
+                <label for="${id}">${opt.label}</label>
+                <span class="count">${opt.count}</span>
+              </div>`;
+          })
+          .join('')
+      : '<span class="text-muted small">Nessuna opzione</span>';
+    bodyHtml = `
+      <div class="filter-tab-body">
+        ${showSearch ? `<input type="search" class="form-control form-control-sm filter-facet-search" data-facet-key="${openFacet.key}" placeholder="Cerca..." value="${usageFacetSearchTerms[openFacet.key] || ''}">` : ''}
+        <div class="filter-facet-options">${optionsHtml}</div>
+      </div>`;
+  }
+
+  const resetHtml = `<button type="button" class="filter-tab filter-tab-reset" id="usage-filters-reset">Azzera filtri</button>`;
+
+  panel.innerHTML = `<div class="filter-tabs">${tabsHtml}${resetHtml}</div>${bodyHtml}`;
+
+  panel.querySelectorAll('[data-usage-facet-toggle]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      buttons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      usageFilters.tier = btn.dataset.tier;
+      const key = btn.dataset.usageFacetToggle;
+      expandedUsageFacetKey = expandedUsageFacetKey === key ? null : key;
+      renderUsageFilters(); // solo UI: nessun ricalcolo di grafici/tabelle
+    });
+  });
+
+  document.getElementById('usage-filters-reset')?.addEventListener('click', resetUsageFilters);
+
+  panel.querySelectorAll('input[type="checkbox"][data-usage-facet]').forEach((cb) => {
+    cb.addEventListener('change', () => {
+      const key = cb.dataset.usageFacet;
+      const value = decodeURIComponent(cb.dataset.value);
+      if (cb.checked) usageActiveFilters[key].add(value);
+      else usageActiveFilters[key].delete(value);
       refreshUsageViews();
     });
   });
 
-  const operatorSelect = document.getElementById('usage-operator-filter');
-  operatorSelect?.addEventListener('change', () => {
-    usageFilters.operator = operatorSelect.value;
-    refreshUsageViews();
+  panel.querySelectorAll('.filter-facet-search').forEach((input) => {
+    const key = input.dataset.facetKey;
+    const applySearch = () => {
+      const term = input.value.trim().toLowerCase();
+      usageFacetSearchTerms[key] = term;
+      input.nextElementSibling.querySelectorAll('.filter-facet-option').forEach((row) => {
+        row.style.display = !term || row.dataset.searchText.includes(term) ? '' : 'none';
+      });
+    };
+    input.addEventListener('input', applySearch);
+    applySearch();
   });
 
-  const poiSelect = document.getElementById('usage-poi-filter');
-  poiSelect?.addEventListener('change', () => {
-    usageFilters.poiCategory = poiSelect.value;
-    refreshUsageViews();
-  });
+  updateUsageFiltersSummary();
+}
 
+function resetUsageFilters() {
+  USAGE_FACETS.forEach((f) => usageActiveFilters[f.key].clear());
+  refreshUsageViews();
+}
+
+function wireUsageFilters() {
   const granButtons = Array.from(document.querySelectorAll('#granularity-filter button'));
   granButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -221,7 +327,13 @@ function refreshUsageViews() {
   const filtered = filterRows(usageTimeseriesRows);
   renderKpiCards(filtered);
   renderGranularityCharts(filtered);
-  renderPoiUsageTable(lastPoiUsagePayload, usageFilters.tier);
+  // n_usate_by_power è scomposto per una sola fascia alla volta: con 0 o
+  // più fasce selezionate contemporaneamente si ricade sull'aggregato
+  // "tutte le fasce" (n_colonnine_usate), coerente col resto della UI dove
+  // "nessuna selezione" = nessun filtro su quella dimensione.
+  const selectedTiers = Array.from(usageActiveFilters.potenza);
+  renderPoiUsageTable(lastPoiUsagePayload, selectedTiers.length === 1 ? selectedTiers[0] : 'tutte');
+  renderUsageFilters();
 }
 
 // --- KPI ricariche ---------------------------------------------------------
@@ -476,7 +588,6 @@ async function loadData() {
 
   lastPoiUsagePayload = poiUsageResponse && poiUsageResponse.ok ? await poiUsageResponse.json() : null;
 
-  populateFilterOptions(usageTimeseriesRows);
   wireUsageFilters();
   refreshUsageViews();
 

@@ -117,31 +117,12 @@
 
       <section class="card shadow-sm mb-4">
         <div class="card-body">
-          <div class="section-eyebrow">Filtri</div>
-          <h2 class="h6 mb-2">Applicati a tutti i grafici e le tabelle qui sotto</h2>
-          <div class="row g-3 align-items-end">
-            <div class="col-md-4">
-              <label class="form-label small text-muted mb-1">Fascia di potenza</label>
-              <div class="btn-group btn-group-sm d-flex" role="group" aria-label="Filtro potenza" id="usage-power-filter">
-                <button type="button" class="btn btn-outline-secondary active" data-tier="tutte">Tutte</button>
-                <button type="button" class="btn btn-outline-secondary" data-tier="lenta">≤22 kW</button>
-                <button type="button" class="btn btn-outline-secondary" data-tier="rapida">22–50 kW</button>
-                <button type="button" class="btn btn-outline-secondary" data-tier="ultra">&gt;50 kW</button>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <label class="form-label small text-muted mb-1" for="usage-operator-filter">Operatore</label>
-              <select class="form-select form-select-sm" id="usage-operator-filter">
-                <option value="">Tutti</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label class="form-label small text-muted mb-1" for="usage-poi-filter">Vicino a</label>
-              <select class="form-select form-select-sm" id="usage-poi-filter">
-                <option value="">Ovunque</option>
-              </select>
-            </div>
+          <div class="mb-2">
+            <div class="section-eyebrow">Filtri</div>
+            <h2 class="h6 mb-1">Applicati a tutti i grafici e le tabelle qui sotto</h2>
+            <p class="text-muted mb-0 small" id="usage-filters-summary">Nessun filtro attivo — vengono mostrati tutti i dati d'uso.</p>
           </div>
+          <div id="usage-filters-panel"></div>
         </div>
       </section>
 
