@@ -333,6 +333,7 @@ function refreshUsageViews() {
   // "nessuna selezione" = nessun filtro su quella dimensione.
   const selectedTiers = Array.from(usageActiveFilters.potenza);
   renderPoiUsageTable(lastPoiUsagePayload, selectedTiers.length === 1 ? selectedTiers[0] : 'tutte');
+  renderOperatorsUsageTable(lastOperatorsCity);
   renderUsageFilters();
 }
 
@@ -496,11 +497,23 @@ function renderPoiUsageTable(data, tier = 'tutte') {
     poiUsageTable.innerHTML = '<p class="text-muted mb-0">Dati non ancora disponibili: esegui fetch_poi.py, generate_station_usage.py e generate_poi_usage.py.</p>';
     return;
   }
-  poiUsageNote.textContent = `Colonnine monitorabili entro ${data.soglia_metri} m da ciascun POI, e quante fra queste sono state effettivamente usate (almeno una ricarica osservata). Fonte POI: ${data.fonte_poi}.`;
+  // Categoria applicata qui allo stesso Set condiviso dal pannello filtri
+  // sopra ("Vicino a"): selezionare una categoria filtra anche questa
+  // tabella, non solo le medie di "Uso reale" — coerente col resto della
+  // pagina dove i filtri in alto valgono per tutto quello che c'è sotto.
+  const selectedCategorie = usageActiveFilters.poi;
+  const poiNoteFiltro = selectedCategorie.size ? ` Filtro categoria attivo: mostrati solo ${Array.from(selectedCategorie).map((c) => CATEGORY_LABELS[c] || c).join(', ')}.` : '';
+  poiUsageNote.textContent = `Colonnine monitorabili entro ${data.soglia_metri} m da ciascun POI, e quante fra queste sono state effettivamente usate (almeno una ricarica osservata). Fonte POI: ${data.fonte_poi}.${poiNoteFiltro}`;
 
   const rows = data.pois
+    .filter((p) => selectedCategorie.size === 0 || selectedCategorie.has(p.categoria))
     .map((p) => ({ ...p, usate_shown: tier === 'tutte' ? p.n_colonnine_usate : p.n_usate_by_power[tier] || 0 }))
     .sort((a, b) => b.usate_shown - a.usate_shown || a.name.localeCompare(b.name, 'it'));
+
+  if (rows.length === 0) {
+    poiUsageTable.innerHTML = '<p class="text-muted mb-0">Nessun POI per la categoria selezionata.</p>';
+    return;
+  }
 
   poiUsageTable.innerHTML = `
     <div class="table-responsive">
@@ -527,16 +540,22 @@ function renderPoiUsageTable(data, tier = 'tutte') {
 
 // --- Operatori — ricariche (stations_usage.json) ---------------------------
 
+let lastOperatorsCity = null;
+
 function renderOperatorsUsageTable(city) {
   if (!operatorsUsageTable) return;
-  const lista = (city && city.operatori_per_uso) || [];
+  lastOperatorsCity = city;
+  const selectedOperatori = usageActiveFilters.operatore;
+  const lista = ((city && city.operatori_per_uso) || []).filter(
+    (op) => selectedOperatori.size === 0 || selectedOperatori.has(op.cpo)
+  );
   if (lista.length === 0) {
     operatorsUsageNote.textContent = '';
-    operatorsUsageTable.innerHTML = '<p class="text-muted mb-0">Dati d\'uso non ancora disponibili.</p>';
+    operatorsUsageTable.innerHTML = `<p class="text-muted mb-0">${city && city.operatori_per_uso && city.operatori_per_uso.length ? 'Nessun operatore per il filtro selezionato.' : "Dati d'uso non ancora disponibili."}</p>`;
     return;
   }
   const raccoltaDalLabel = raccoltaDalIso && window.EVFormat ? EVFormat.popupDate(raccoltaDalIso.split('T')[0]) : raccoltaDalIso;
-  operatorsUsageNote.textContent = `Ricariche osservate dal ${raccoltaDalLabel} (${city.days_collected} giorni di storico raccolto finora).`;
+  operatorsUsageNote.textContent = `Ricariche osservate dal ${raccoltaDalLabel} (${city.days_collected} giorni di storico raccolto finora).${selectedOperatori.size ? ' Filtro operatore attivo.' : ''}`;
 
   operatorsUsageTable.innerHTML = `
     <div class="table-responsive">
