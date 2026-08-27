@@ -32,7 +32,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Aggregazioni statistiche (POI, A22, trend, uso, curiosità, previsioni)
+      - name: Aggregazioni statistiche (POI, autostrade, trend, uso, curiosità, previsioni)
         run: |
           python generate_stats.py
           python generate_trends.py
