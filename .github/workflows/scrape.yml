@@ -3,7 +3,7 @@ name: scrape
 
 on:
   schedule:
-    - cron: '0 * * * *'      # ogni ora (UTC). Il loop interno copre i 5 min.
+    - cron: '7 * * * *'      # ogni ora (UTC), minuto non tondo per evitare congestione GitHub. Il loop interno copre i 5 min.
   workflow_dispatch: {}       # avvio manuale dalla tab Actions
 
 permissions:

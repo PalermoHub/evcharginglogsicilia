@@ -3,7 +3,7 @@ name: update_stats
 
 on:
   schedule:
-    - cron: '30 2 * * *'   # una volta al giorno, fuori dagli orari di punta
+    - cron: '17 3 * * *'   # una volta al giorno, orario non tondo per evitare congestione GitHub
   workflow_dispatch: {}     # avvio manuale dalla tab Actions
 
 permissions:
