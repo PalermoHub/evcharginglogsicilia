@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-28T07:26:55.307515+00:00",
+  "generated_at": "2026-08-29T10:02:19.434483+00:00",
   "label": "Sicilia città",
   "n_colonnine_usage_observable": 2901,
-  "days_collected": 3,
+  "days_collected": 4,
   "andamento_giornaliero": {
     "available": true,
     "kind": "andamento_giornaliero",
-    "days_collected": 3,
+    "days_collected": 4,
     "points": [
       {
         "date": "2026-08-26",
@@ -22,28 +22,34 @@
       },
       {
         "date": "2026-08-28",
-        "share_active": 64.3,
-        "share_charging": 6.0,
-        "n_snapshots": 6
+        "share_active": 64.7,
+        "share_charging": 8.5,
+        "n_snapshots": 18
+      },
+      {
+        "date": "2026-08-29",
+        "share_active": 65.4,
+        "share_charging": 3.9,
+        "n_snapshots": 11
       }
     ]
   },
   "profilo_settimanale": {
     "available": false,
     "kind": "profilo_settimanale",
-    "days_collected": 3,
+    "days_collected": 4,
     "days_needed": 7
   },
   "profilo_mensile": {
     "available": false,
     "kind": "profilo_mensile",
-    "days_collected": 3,
+    "days_collected": 4,
     "days_needed": 30
   },
   "andamento_conteggio_giornaliero": {
     "available": true,
     "kind": "andamento_conteggio_giornaliero",
-    "days_collected": 3,
+    "days_collected": 4,
     "points": [
       {
         "date": "2026-08-26",
@@ -59,8 +65,14 @@
       },
       {
         "date": "2026-08-28",
-        "n_attive": 2160,
-        "n_non_attive": 1038,
+        "n_attive": 2179,
+        "n_non_attive": 1019,
+        "n_totale": 3198
+      },
+      {
+        "date": "2026-08-29",
+        "n_attive": 2200,
+        "n_non_attive": 998,
         "n_totale": 3198
       }
     ]
@@ -68,7 +80,7 @@
   "colonnine_monitorabili_giornaliero": {
     "available": true,
     "kind": "colonnine_monitorabili_giornaliero",
-    "days_collected": 3,
+    "days_collected": 4,
     "points": [
       {
         "date": "2026-08-26",
@@ -80,6 +92,10 @@
       },
       {
         "date": "2026-08-28",
+        "n_monitorabili": 2901
+      },
+      {
+        "date": "2026-08-29",
         "n_monitorabili": 2901
       }
     ]
