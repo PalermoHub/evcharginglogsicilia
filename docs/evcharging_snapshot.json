@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-04T04:34:10+00:00",
+  "generated_at": "2026-09-04T04:39:24+00:00",
   "stats": {
     "total": 3216,
-    "active": 2014,
-    "inactive": 1202,
-    "charging": 312
+    "active": 2011,
+    "inactive": 1205,
+    "charging": 311
   },
   "points": [
     {
@@ -35289,8 +35289,8 @@
     },
     {
       "id_evse": "IT*PLN*EE006389*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -38749,8 +38749,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ0979A*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -41290,7 +41290,7 @@
     {
       "id_evse": "IT*PLN*EE006389*1",
       "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -42630,7 +42630,7 @@
     {
       "id_evse": "IT*EWI*EEW027701*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -53130,7 +53130,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00211*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -54009,8 +54009,8 @@
     },
     {
       "id_evse": "IT*EWI*EEW052301*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -61970,7 +61970,7 @@
     {
       "id_evse": "IT*TSL*E000AD0",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
