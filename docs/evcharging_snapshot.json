@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-05T23:05:34+00:00",
+  "generated_at": "2026-09-05T23:10:48+00:00",
   "stats": {
     "total": 3216,
     "active": 1955,
     "inactive": 1261,
-    "charging": 431
+    "charging": 430
   },
   "points": [
     {
       "id_evse": "IT*DUF*EP0001*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "DUFERCO MOBILITY SRL",
@@ -11530,7 +11530,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00276*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -11549,8 +11549,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00276*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -18729,8 +18729,8 @@
     },
     {
       "id_evse": "IT*PLN*EE000793*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -63329,8 +63329,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002617*1",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -63349,8 +63349,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002617*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
