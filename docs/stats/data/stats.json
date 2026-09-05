@@ -1,21 +1,21 @@
 {
   "summary": {
     "total": 3172,
-    "active": 1706,
-    "active_known": 1435,
-    "active_unknown": 271,
-    "inactive": 1154,
-    "charging": 312,
-    "share_active": 53.8,
-    "generated_at": "2026-09-04T05:16:01+00:00",
+    "active": 1561,
+    "active_known": 1296,
+    "active_unknown": 265,
+    "inactive": 1243,
+    "charging": 368,
+    "share_active": 49.2,
+    "generated_at": "2026-09-05T05:11:58+00:00",
     "raccolta_dati_dal": "2026-08-26T11:23:46+00:00"
   },
   "autostrada": {
     "count": 26,
-    "active": 3,
-    "inactive": 20,
-    "charging": 3,
-    "share_active": 11.5,
+    "active": 5,
+    "inactive": 19,
+    "charging": 2,
+    "share_active": 19.2,
     "operators": {
       "Go Electric Stations SRLS": 16,
       "BEC": 6,
@@ -26,12 +26,12 @@
     {
       "name": "Supermercati",
       "count": 15,
-      "active": 6,
-      "active_known": 6,
+      "active": 4,
+      "active_known": 4,
       "active_unknown": 0,
-      "inactive": 7,
-      "charging": 2,
-      "share_active": 40.0
+      "inactive": 8,
+      "charging": 3,
+      "share_active": 26.7
     },
     {
       "name": "Stazioni ferroviarie",
@@ -47,21 +47,21 @@
   "operators": [
     {
       "name": "ENEL X WAY ITALIA SRL",
-      "count": 1803,
-      "active": 786,
-      "active_known": 786,
+      "count": 1758,
+      "active": 684,
+      "active_known": 684,
       "active_unknown": 0,
       "by_power": {
-        "lenta": 1247,
-        "rapida": 96,
-        "ultra": 460
+        "lenta": 1217,
+        "rapida": 91,
+        "ultra": 450
       }
     },
     {
       "name": "BEC",
       "count": 603,
-      "active": 389,
-      "active_known": 389,
+      "active": 329,
+      "active_known": 329,
       "active_unknown": 0,
       "by_power": {
         "lenta": 0,
@@ -84,8 +84,8 @@
     {
       "name": "Go Electric Stations SRLS",
       "count": 96,
-      "active": 45,
-      "active_known": 45,
+      "active": 41,
+      "active_known": 41,
       "active_unknown": 0,
       "by_power": {
         "lenta": 77,
@@ -96,8 +96,8 @@
     {
       "name": "EWIVA SRL",
       "count": 77,
-      "active": 29,
-      "active_known": 29,
+      "active": 25,
+      "active_known": 25,
       "active_unknown": 0,
       "by_power": {
         "lenta": 0,
@@ -106,10 +106,22 @@
       }
     },
     {
+      "name": "ENX",
+      "count": 66,
+      "active": 41,
+      "active_known": 41,
+      "active_unknown": 0,
+      "by_power": {
+        "lenta": 43,
+        "rapida": 5,
+        "ultra": 18
+      }
+    },
+    {
       "name": "Plenitude On The Road S.r.l.",
       "count": 61,
-      "active": 34,
-      "active_known": 34,
+      "active": 30,
+      "active_known": 30,
       "active_unknown": 0,
       "by_power": {
         "lenta": 0,
@@ -120,8 +132,8 @@
     {
       "name": "DUFERCO MOBILITY SRL",
       "count": 50,
-      "active": 30,
-      "active_known": 30,
+      "active": 32,
+      "active_known": 32,
       "active_unknown": 0,
       "by_power": {
         "lenta": 44,
@@ -132,8 +144,8 @@
     {
       "name": "Tesla Italia Srl.",
       "count": 37,
-      "active": 13,
-      "active_known": 13,
+      "active": 15,
+      "active_known": 15,
       "active_unknown": 0,
       "by_power": {
         "lenta": 21,
@@ -144,24 +156,12 @@
     {
       "name": "ACEA ENERGIA",
       "count": 34,
-      "active": 14,
-      "active_known": 14,
+      "active": 15,
+      "active_known": 15,
       "active_unknown": 0,
       "by_power": {
         "lenta": 30,
         "rapida": 4,
-        "ultra": 0
-      }
-    },
-    {
-      "name": "UnoEnergy DriWe spa",
-      "count": 32,
-      "active": 21,
-      "active_known": 0,
-      "active_unknown": 21,
-      "by_power": {
-        "lenta": 32,
-        "rapida": 0,
         "ultra": 0
       }
     }
