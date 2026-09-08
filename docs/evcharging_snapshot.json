@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-08T14:27:47+00:00",
+  "generated_at": "2026-09-08T14:33:03+00:00",
   "stats": {
     "total": 3216,
-    "active": 1882,
-    "inactive": 1334,
-    "charging": 353
+    "active": 1881,
+    "inactive": 1335,
+    "charging": 350
   },
   "points": [
     {
@@ -5230,7 +5230,7 @@
     {
       "id_evse": "IT*EWI*EEW025901*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -34829,8 +34829,8 @@
     },
     {
       "id_evse": "IT*EWI*EEW025901*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -38710,7 +38710,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00379*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -38750,7 +38750,7 @@
     {
       "id_evse": "IT*ENX*E24BZ0979A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
