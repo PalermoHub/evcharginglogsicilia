@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-10T08:07:17.703065+00:00",
+  "generated_at": "2026-09-11T08:02:26.322859+00:00",
   "label": "Sicilia città",
   "n_colonnine_usage_observable": 2914,
-  "days_collected": 16,
+  "days_collected": 17,
   "andamento_giornaliero": {
     "available": true,
     "kind": "andamento_giornaliero",
-    "days_collected": 16,
+    "days_collected": 17,
     "points": [
       {
         "date": "2026-08-26",
@@ -100,16 +100,22 @@
       },
       {
         "date": "2026-09-10",
-        "share_active": 54.3,
-        "share_charging": 12.1,
-        "n_snapshots": 24
+        "share_active": 54.8,
+        "share_charging": 12.2,
+        "n_snapshots": 73
+      },
+      {
+        "date": "2026-09-11",
+        "share_active": 56.3,
+        "share_charging": 10.1,
+        "n_snapshots": 21
       }
     ]
   },
   "profilo_settimanale": {
     "available": true,
     "kind": "profilo_settimanale",
-    "days_collected": 16,
+    "days_collected": 17,
     "weekday_labels": [
       "Lun",
       "Mar",
@@ -208,29 +214,29 @@
         null,
         null,
         null,
-        62.4,
-        62.0,
+        58.9,
+        58.5,
         null,
         null,
         63.4,
-        62.0,
-        60.9,
+        59.5,
+        58.3,
         null,
         null,
-        60.3,
-        60.3,
+        57.1,
+        58.1,
         null,
-        58.9,
-        58.7,
-        63.6
+        56.6,
+        57.2,
+        62.6
       ],
       [
-        61.3,
+        59.3,
         null,
         null,
         null,
-        59.4,
-        59.6,
+        58.1,
+        58.0,
         null,
         null,
         null,
@@ -392,29 +398,29 @@
         null,
         null,
         null,
-        9.0,
-        9.3,
+        10.6,
+        10.9,
         null,
         null,
         10.0,
-        10.5,
-        10.8,
+        11.4,
+        11.7,
         null,
         null,
         12.1,
-        12.2,
-        null,
         12.3,
-        12.0,
-        6.9
+        null,
+        11.9,
+        11.8,
+        7.3
       ],
       [
-        9.4,
+        9.8,
         null,
         null,
         null,
-        10.5,
-        10.7,
+        10.2,
+        10.1,
         null,
         null,
         null,
@@ -491,13 +497,13 @@
   "profilo_mensile": {
     "available": false,
     "kind": "profilo_mensile",
-    "days_collected": 16,
+    "days_collected": 17,
     "days_needed": 30
   },
   "andamento_conteggio_giornaliero": {
     "available": true,
     "kind": "andamento_conteggio_giornaliero",
-    "days_collected": 16,
+    "days_collected": 17,
     "points": [
       {
         "date": "2026-08-26",
@@ -591,8 +597,14 @@
       },
       {
         "date": "2026-09-10",
-        "n_attive": 1872,
-        "n_non_attive": 1326,
+        "n_attive": 1908,
+        "n_non_attive": 1290,
+        "n_totale": 3198
+      },
+      {
+        "date": "2026-09-11",
+        "n_attive": 1935,
+        "n_non_attive": 1263,
         "n_totale": 3198
       }
     ]
@@ -600,7 +612,7 @@
   "colonnine_monitorabili_giornaliero": {
     "available": true,
     "kind": "colonnine_monitorabili_giornaliero",
-    "days_collected": 16,
+    "days_collected": 17,
     "points": [
       {
         "date": "2026-08-26",
@@ -664,6 +676,10 @@
       },
       {
         "date": "2026-09-10",
+        "n_monitorabili": 2914
+      },
+      {
+        "date": "2026-09-11",
         "n_monitorabili": 2914
       }
     ]
