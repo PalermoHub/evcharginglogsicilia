@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-11T14:16:39+00:00",
+  "generated_at": "2026-09-11T14:21:58+00:00",
   "stats": {
     "total": 3216,
     "active": 2007,
     "inactive": 1209,
-    "charging": 330
+    "charging": 331
   },
   "points": [
     {
@@ -7010,7 +7010,7 @@
     {
       "id_evse": "IT*ENX*ESN2403150173*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -30950,7 +30950,7 @@
     {
       "id_evse": "IT*ENX*E23BZ5896A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -46590,7 +46590,7 @@
     {
       "id_evse": "IT*PLN*EE003957*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -48130,7 +48130,7 @@
     {
       "id_evse": "IT*ENX*ESN2403150176*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -51629,8 +51629,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00338*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -59610,7 +59610,7 @@
     {
       "id_evse": "IT*PLN*EE003958*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -61869,8 +61869,8 @@
     },
     {
       "id_evse": "IT*PLN*EE004764*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Plenitude On The Road S.r.l.",
