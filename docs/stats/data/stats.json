@@ -1,21 +1,21 @@
 {
   "summary": {
     "total": 3172,
-    "active": 1639,
-    "active_known": 1372,
+    "active": 1774,
+    "active_known": 1507,
     "active_unknown": 267,
-    "inactive": 1243,
-    "charging": 290,
-    "share_active": 51.7,
-    "generated_at": "2026-09-11T05:22:50+00:00",
+    "inactive": 1150,
+    "charging": 248,
+    "share_active": 55.9,
+    "generated_at": "2026-09-12T05:24:34+00:00",
     "raccolta_dati_dal": "2026-08-26T11:23:46+00:00"
   },
   "autostrada": {
     "count": 26,
-    "active": 4,
-    "inactive": 20,
+    "active": 3,
+    "inactive": 21,
     "charging": 2,
-    "share_active": 15.4,
+    "share_active": 11.5,
     "operators": {
       "Go Electric Stations SRLS": 16,
       "BEC": 6,
@@ -26,47 +26,59 @@
     {
       "name": "Supermercati",
       "count": 15,
-      "active": 7,
-      "active_known": 7,
+      "active": 8,
+      "active_known": 8,
       "active_unknown": 0,
-      "inactive": 6,
+      "inactive": 5,
       "charging": 2,
-      "share_active": 46.7
+      "share_active": 53.3
     },
     {
       "name": "Stazioni ferroviarie",
       "count": 30,
-      "active": 16,
-      "active_known": 16,
+      "active": 19,
+      "active_known": 19,
       "active_unknown": 0,
-      "inactive": 12,
-      "charging": 2,
-      "share_active": 53.3
+      "inactive": 11,
+      "charging": 0,
+      "share_active": 63.3
     }
   ],
   "operators": [
     {
       "name": "ENEL X WAY ITALIA SRL",
-      "count": 1666,
-      "active": 708,
-      "active_known": 708,
+      "count": 1648,
+      "active": 792,
+      "active_known": 792,
       "active_unknown": 0,
       "by_power": {
-        "lenta": 1147,
-        "rapida": 81,
+        "lenta": 1131,
+        "rapida": 79,
         "ultra": 438
       }
     },
     {
       "name": "BEC",
       "count": 603,
-      "active": 335,
-      "active_known": 335,
+      "active": 366,
+      "active_known": 366,
       "active_unknown": 0,
       "by_power": {
         "lenta": 0,
         "rapida": 591,
         "ultra": 12
+      }
+    },
+    {
+      "name": "ENX",
+      "count": 176,
+      "active": 92,
+      "active_known": 92,
+      "active_unknown": 0,
+      "by_power": {
+        "lenta": 129,
+        "rapida": 17,
+        "ultra": 30
       }
     },
     {
@@ -79,18 +91,6 @@
         "lenta": 171,
         "rapida": 4,
         "ultra": 0
-      }
-    },
-    {
-      "name": "ENX",
-      "count": 158,
-      "active": 77,
-      "active_known": 77,
-      "active_unknown": 0,
-      "by_power": {
-        "lenta": 113,
-        "rapida": 15,
-        "ultra": 30
       }
     },
     {
@@ -108,8 +108,8 @@
     {
       "name": "EWIVA SRL",
       "count": 77,
-      "active": 29,
-      "active_known": 29,
+      "active": 36,
+      "active_known": 36,
       "active_unknown": 0,
       "by_power": {
         "lenta": 0,
@@ -144,8 +144,8 @@
     {
       "name": "Tesla Italia Srl.",
       "count": 37,
-      "active": 13,
-      "active_known": 13,
+      "active": 11,
+      "active_known": 11,
       "active_unknown": 0,
       "by_power": {
         "lenta": 21,
