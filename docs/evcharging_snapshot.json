@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-15T05:25:02+00:00",
+  "generated_at": "2026-09-15T05:30:18+00:00",
   "stats": {
     "total": 3216,
-    "active": 1987,
-    "inactive": 1229,
-    "charging": 84
+    "active": 1985,
+    "inactive": 1231,
+    "charging": 89
   },
   "points": [
     {
@@ -6570,7 +6570,7 @@
     {
       "id_evse": "IT*ENX*E22BZ2210A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -6589,8 +6589,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ2210A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -28350,7 +28350,7 @@
     {
       "id_evse": "IT*DUF*EP0014*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "DUFERCO MOBILITY SRL",
@@ -32690,7 +32690,7 @@
     {
       "id_evse": "IT*ENX*E23BZ0864A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -32709,8 +32709,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ0864A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -45650,7 +45650,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00211*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -58090,7 +58090,7 @@
     {
       "id_evse": "ITGESE839172436",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
