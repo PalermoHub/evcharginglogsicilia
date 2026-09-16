@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-16T23:12:32+00:00",
+  "generated_at": "2026-09-16T23:17:50+00:00",
   "stats": {
     "total": 3216,
     "active": 1838,
     "inactive": 1378,
-    "charging": 82
+    "charging": 85
   },
   "points": [
     {
@@ -8290,7 +8290,7 @@
     {
       "id_evse": "IT*ENX*E22BZ3162A*3",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27469,8 +27469,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00938*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -28649,8 +28649,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AL00708*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -32409,8 +32409,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00279*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -32429,8 +32429,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00279*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -64090,7 +64090,7 @@
     {
       "id_evse": "IT*TSL*E0E3D4U",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
