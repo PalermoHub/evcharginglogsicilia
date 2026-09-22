@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-22T22:24:58+00:00",
+  "generated_at": "2026-09-22T22:30:13+00:00",
   "stats": {
     "total": 3216,
-    "active": 2173,
-    "inactive": 1043,
+    "active": 2175,
+    "inactive": 1041,
     "charging": 83
   },
   "points": [
@@ -3290,7 +3290,7 @@
     {
       "id_evse": "IT*EWI*EEW032601*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -5729,8 +5729,8 @@
     },
     {
       "id_evse": "ITEDNE0250*01*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Edison Next S.P.A.",
@@ -35429,8 +35429,8 @@
     },
     {
       "id_evse": "ITEDNE0250*01*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Edison Next S.P.A.",
@@ -45350,7 +45350,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3BB5U000445*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
