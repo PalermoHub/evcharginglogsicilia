@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-09T09:45:46+00:00",
+  "generated_at": "2026-10-09T16:05:02+00:00",
   "stats": {
     "total": 3216,
-    "active": 2026,
-    "inactive": 1190,
-    "charging": 231
+    "active": 2063,
+    "inactive": 1153,
+    "charging": 301
   },
   "points": [
     {
@@ -69,8 +69,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XM32T7CB3W000161*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -149,8 +149,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3BB4U000217*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -569,8 +569,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAL115RJ*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -770,7 +770,7 @@
     {
       "id_evse": "IT*ENX*E22BZ3987A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -1069,8 +1069,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3QQ1AN00074*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -1129,8 +1129,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ3704A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -1149,8 +1149,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ4181A*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -1250,7 +1250,7 @@
     {
       "id_evse": "IT*ENX*E24XP22T3QQJAN00145*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -1430,7 +1430,7 @@
     {
       "id_evse": "IT*EWI*EEW105103*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -1449,8 +1449,8 @@
     },
     {
       "id_evse": "IT*PLN*EE000648*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -1529,8 +1529,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002624*1",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -1569,8 +1569,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002818*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Plenitude On The Road S.r.l.",
@@ -1850,7 +1850,7 @@
     {
       "id_evse": "ITGESE875652866",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -1910,7 +1910,7 @@
     {
       "id_evse": "IT*ATE*E00827*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Atlante S.r.l",
@@ -1969,8 +1969,8 @@
     },
     {
       "id_evse": "IT*EMOE343",
-      "stato": "Non Attivo",
-      "stato_raw": "INOPERATIVE",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EMOBITALY S.r.l.",
@@ -2029,8 +2029,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3BB1AF00014*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -2349,8 +2349,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00766*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -2369,8 +2369,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAL115RJ*2",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -2750,7 +2750,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN01055*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -2889,8 +2889,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00379*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -3130,7 +3130,7 @@
     {
       "id_evse": "IT*ENX*ESN2312250705*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -3189,8 +3189,8 @@
     },
     {
       "id_evse": "IT*ENX*ESN2403181449*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -3569,8 +3569,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002624*2",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -3709,8 +3709,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003979*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -3729,8 +3729,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003979*2",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -3850,7 +3850,7 @@
     {
       "id_evse": "IT*DUF*EP0014*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "DUFERCO MOBILITY SRL",
@@ -4010,7 +4010,7 @@
     {
       "id_evse": "IT*ENX*E19XP22T3KK1AT00044*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -4570,7 +4570,7 @@
     {
       "id_evse": "IT*ENX*E23BZ5125A*3",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -4629,8 +4629,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AK116RJ*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -4729,8 +4729,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ0983A*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -4869,8 +4869,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ3723A*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -4989,8 +4989,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00098*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -5210,7 +5210,7 @@
     {
       "id_evse": "IT*EWI*EEW0162S1*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -5229,8 +5229,8 @@
     },
     {
       "id_evse": "IT*EWI*EEW025901*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -5289,8 +5289,8 @@
     },
     {
       "id_evse": "IT*PLN*EE000369*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -5389,8 +5389,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002102*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -5410,7 +5410,7 @@
     {
       "id_evse": "IT*PLN*EE002102*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -5470,7 +5470,7 @@
     {
       "id_evse": "IT*PLN*EE003956*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -5509,8 +5509,8 @@
     },
     {
       "id_evse": "IT*PLN*EE005404*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -5650,7 +5650,7 @@
     {
       "id_evse": "IT*TSL*E0E3D4S",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
@@ -5990,7 +5990,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00045*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -6010,7 +6010,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00124*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -6170,7 +6170,7 @@
     {
       "id_evse": "IT*ENX*E20EP22T3KK4AL00066*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -6189,8 +6189,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XM32T7KK3AR00045*3",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -6570,7 +6570,7 @@
     {
       "id_evse": "IT*ENX*E22BZ2210A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -6589,8 +6589,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ2210A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -6830,7 +6830,7 @@
     {
       "id_evse": "IT*ENX*E24BZ1949A*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -6909,8 +6909,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00104*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -6929,8 +6929,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQJAN00262*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -7110,7 +7110,7 @@
     {
       "id_evse": "IT*EWI*EEW045801*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -7690,7 +7690,7 @@
     {
       "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2250700663*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ACEA ENERGIA",
@@ -7869,8 +7869,8 @@
     },
     {
       "id_evse": "IT*ENX*E15ZP22T3BB1P000049*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -7909,8 +7909,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3BB1U000078*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -8290,7 +8290,7 @@
     {
       "id_evse": "IT*ENX*E22BZ3162A*3",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -8389,8 +8389,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00203*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -8490,7 +8490,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN01001*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -8509,8 +8509,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ4942A*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -8629,8 +8629,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00410*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -9430,7 +9430,7 @@
     {
       "id_evse": "IT*TSL*E000ACY",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
@@ -9969,8 +9969,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AL01095*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -9989,8 +9989,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AL01179*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -10330,7 +10330,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00700*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -10550,7 +10550,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00033*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -10669,8 +10669,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ1808A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -10790,7 +10790,7 @@
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00143*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -11549,8 +11549,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00276*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -11669,8 +11669,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XK11T2J03BB00561*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -11710,7 +11710,7 @@
     {
       "id_evse": "IT*ENX*E20XM32T7KK4AR00089*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -11849,8 +11849,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XV11TDK03AB00018*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -11930,7 +11930,7 @@
     {
       "id_evse": "IT*ENX*E22BZ3880A*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -11969,8 +11969,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00177*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -12150,7 +12150,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3QQ1AN00426*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -12889,8 +12889,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003941*1",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -13490,7 +13490,7 @@
     {
       "id_evse": "IT*ENX*E19XP22T5HK1AG00104*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -13730,7 +13730,7 @@
     {
       "id_evse": "IT*ENX*E22BZ4007A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -13749,8 +13749,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ4007A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -13829,8 +13829,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AK214RJ*2",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -14050,7 +14050,7 @@
     {
       "id_evse": "IT*ENX*E24BZ3682A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -14909,8 +14909,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002345*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -15370,7 +15370,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T5HK4AH00100*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -15470,7 +15470,7 @@
     {
       "id_evse": "IT*ENX*E19XP22T5HK1AG00030*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -15510,7 +15510,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AL00377*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -15609,8 +15609,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ1184A*3",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -15730,7 +15730,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00191*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -16049,8 +16049,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ3683A*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -16410,7 +16410,7 @@
     {
       "id_evse": "IT*EWI*EEW017502*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -16470,7 +16470,7 @@
     {
       "id_evse": "IT*EWI*EHPC161900147*3",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -16629,8 +16629,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002528*1",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -16649,8 +16649,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002544*1",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -16749,8 +16749,8 @@
     },
     {
       "id_evse": "IT*PLN*EE006096*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -16769,8 +16769,8 @@
     },
     {
       "id_evse": "IT*PLN*EE006096*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -17449,8 +17449,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00159*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -17529,8 +17529,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00213*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -17570,7 +17570,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00298*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -17629,8 +17629,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ5115A*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -17689,8 +17689,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ5261A*3",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -17710,7 +17710,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AK490RJ*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -17810,7 +17810,7 @@
     {
       "id_evse": "IT*ENX*E24BZ3703A*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -18970,7 +18970,7 @@
     {
       "id_evse": "ITGESE806479907",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -19110,7 +19110,7 @@
     {
       "id_evse": "IT*ENX*E15ZP22T3BB1P000020*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -19150,7 +19150,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T5AB5U000158*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -19310,7 +19310,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AL00377*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -19370,7 +19370,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00177*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -19470,7 +19470,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00185*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -19629,8 +19629,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ7550A*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -19710,7 +19710,7 @@
     {
       "id_evse": "IT*ENX*E24BZ3695A*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -19789,8 +19789,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQJAN00105*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -19890,7 +19890,7 @@
     {
       "id_evse": "IT*ENX*ESN2403150176*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -20270,7 +20270,7 @@
     {
       "id_evse": "IT*EWI*EEW105102*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -20309,8 +20309,8 @@
     },
     {
       "id_evse": "IT*PLN*EE000373*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -20809,8 +20809,8 @@
     },
     {
       "id_evse": "ITGESE875655261",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "INOPERATIVE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -20869,8 +20869,8 @@
     },
     {
       "id_evse": "IT*ATE*E00746*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Atlante S.r.l",
@@ -21369,8 +21369,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAL00656*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -21409,8 +21409,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T5HKJAL00183*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -21469,8 +21469,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ3777A*1",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -21489,8 +21489,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00177*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -21690,7 +21690,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00166*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -21830,7 +21830,7 @@
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00104*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -22350,7 +22350,7 @@
     {
       "id_evse": "IT*PLN*EE002899*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -22369,8 +22369,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002899*2",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -22450,7 +22450,7 @@
     {
       "id_evse": "IT*PLN*EE004060*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -22630,7 +22630,7 @@
     {
       "id_evse": "ITGESE840303659",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -23030,7 +23030,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AL00882*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -23089,8 +23089,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AK453RJ*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -23149,8 +23149,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00238*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -23350,7 +23350,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00614*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -23369,8 +23369,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00958*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -23629,8 +23629,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ1808A*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -23690,7 +23690,7 @@
     {
       "id_evse": "IT*ENX*E24BZ4168A*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -23770,7 +23770,7 @@
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00106*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -23790,7 +23790,7 @@
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00143*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -23990,7 +23990,7 @@
     {
       "id_evse": "IT*EWI*EEW031901*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -24109,8 +24109,8 @@
     },
     {
       "id_evse": "IT*PLN*EE000369*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -24450,7 +24450,7 @@
     {
       "id_evse": "IT*PLN*EE004203*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -24690,7 +24690,7 @@
     {
       "id_evse": "IT*DUF*EP0007*2",
       "stato": "Attivo",
-      "stato_raw": "RESERVED",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "DUFERCO MOBILITY SRL",
@@ -24970,7 +24970,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AT00048*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -25070,7 +25070,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AM00077*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -25150,7 +25150,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00494*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -25569,8 +25569,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ5125A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -25690,7 +25690,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KKJAL410RJ*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -25829,8 +25829,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQJAN00143*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -25849,8 +25849,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQJAN00143*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -25930,7 +25930,7 @@
     {
       "id_evse": "IT*EWI*EEW078502*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -26170,7 +26170,7 @@
     {
       "id_evse": "IT*PLN*EE003037*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Plenitude On The Road S.r.l.",
@@ -26210,7 +26210,7 @@
     {
       "id_evse": "IT*PLN*EE003982*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -26249,8 +26249,8 @@
     },
     {
       "id_evse": "IT*PLN*EE004061*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -26309,8 +26309,8 @@
     },
     {
       "id_evse": "IT*PLN*EE006533*2",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -26550,7 +26550,7 @@
     {
       "id_evse": "IT*DUF*EP0007*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "DUFERCO MOBILITY SRL",
@@ -26729,8 +26729,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XM32T7CB3W000161*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -26749,8 +26749,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3BB4U000282*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -26850,7 +26850,7 @@
     {
       "id_evse": "IT*ENX*E19XP22T3KK4AZ00761*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -26970,7 +26970,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AL00306*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -26990,7 +26990,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AZ00084*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27010,7 +27010,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AZ00084*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27030,7 +27030,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AK00097*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27129,8 +27129,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00601*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27249,8 +27249,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ3758A*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -27289,8 +27289,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAK01241*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27429,8 +27429,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00337*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27450,7 +27450,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00470*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27490,7 +27490,7 @@
     {
       "id_evse": "IT*ENX*E23BZ5133A*3",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27630,7 +27630,7 @@
     {
       "id_evse": "IT*ENX*E24BZ3699A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27690,7 +27690,7 @@
     {
       "id_evse": "IT*ENX*ESN2403141290*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27730,7 +27730,7 @@
     {
       "id_evse": "IT*EWI*E23BZ0920B*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -27830,7 +27830,7 @@
     {
       "id_evse": "IT*IOY*E422102",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "IONITY GMBH",
@@ -28289,8 +28289,8 @@
     },
     {
       "id_evse": "ITGESE875655260",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "INOPERATIVE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -28310,7 +28310,7 @@
     {
       "id_evse": "IT*ATE*E00748*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Atlante S.r.l",
@@ -28369,8 +28369,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00082*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -28550,7 +28550,7 @@
     {
       "id_evse": "IT*ENX*E19XP22T5HK1AL00011*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -28630,7 +28630,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AL00636*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -28729,8 +28729,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XP22T5HK1AL00060*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -28810,7 +28810,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00474*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -28849,8 +28849,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00789*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -28869,8 +28869,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00789*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -28950,7 +28950,7 @@
     {
       "id_evse": "IT*ENX*E22BZ3162A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -29130,7 +29130,7 @@
     {
       "id_evse": "IT*ENX*E23BZ5125A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -29250,7 +29250,7 @@
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00226*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -29450,7 +29450,7 @@
     {
       "id_evse": "IT*EWI*EEW017501*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -29510,7 +29510,7 @@
     {
       "id_evse": "IT*EWI*EEW028401*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -29630,7 +29630,7 @@
     {
       "id_evse": "IT*PLN*EE001526*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -29670,7 +29670,7 @@
     {
       "id_evse": "IT*PLN*EE002526*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -29850,7 +29850,7 @@
     {
       "id_evse": "IT*PLN*EE003980*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -29929,8 +29929,8 @@
     },
     {
       "id_evse": "IT*PLN*EE004151*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -30250,7 +30250,7 @@
     {
       "id_evse": "IT*ATE*E00748*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Atlante S.r.l",
@@ -30470,7 +30470,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AL00583*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -30889,8 +30889,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ4943A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -31189,8 +31189,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ4168A*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -31249,8 +31249,8 @@
     },
     {
       "id_evse": "IT*ENX*ESN2311030091*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -31590,7 +31590,7 @@
     {
       "id_evse": "IT*PLN*EE002900*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -31910,7 +31910,7 @@
     {
       "id_evse": "IT*A2M*E12336021630027*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "A2A E.MOBILITY S.R.L.",
@@ -32009,8 +32009,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3BB4U000290*1",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -32050,7 +32050,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00274*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -32209,8 +32209,8 @@
     },
     {
       "id_evse": "IT*ENX*E19XP22T5HK1AL00011*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -32229,8 +32229,8 @@
     },
     {
       "id_evse": "IT*ENX*E19XP22T5HK4AH00047*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -32249,8 +32249,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XM32T7KK4AR00089*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -32270,7 +32270,7 @@
     {
       "id_evse": "IT*ENX*E20XM32T7KK4AR00163*3",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -32690,7 +32690,7 @@
     {
       "id_evse": "IT*ENX*E23BZ0864A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -32709,8 +32709,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ0864A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -33370,7 +33370,7 @@
     {
       "id_evse": "IT*PLN*EE003957*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -33450,7 +33450,7 @@
     {
       "id_evse": "IT*PLN*EE005417*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -33950,7 +33950,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00359*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -34030,7 +34030,7 @@
     {
       "id_evse": "IT*ENX*E19XP22T3KK1AL00352*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -34170,7 +34170,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AL00248*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -34290,7 +34290,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00411*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -34369,8 +34369,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00184*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -34510,7 +34510,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN01001*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -34570,7 +34570,7 @@
     {
       "id_evse": "IT*ENX*E23BZ4943A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -34709,8 +34709,8 @@
     },
     {
       "id_evse": "IT*ENX*ESN2311030100*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -34930,7 +34930,7 @@
     {
       "id_evse": "IT*PLN*EE000367*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -35049,8 +35049,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002525*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -35069,8 +35069,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002613*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -35689,8 +35689,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00259*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -36230,7 +36230,7 @@
     {
       "id_evse": "IT*ENX*E22BZ1177A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -36410,7 +36410,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00199*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -36450,7 +36450,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00219*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -36609,8 +36609,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ5261A*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -36690,7 +36690,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00159*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -36729,8 +36729,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00376*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -37330,7 +37330,7 @@
     {
       "id_evse": "IT*PLN*EH000989*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -37709,8 +37709,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T5AB4U000031*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -38090,7 +38090,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AM00050*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -38450,7 +38450,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00327*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -38650,7 +38650,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00157*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -38850,7 +38850,7 @@
     {
       "id_evse": "IT*ENX*E24BZ3718A*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -38990,7 +38990,7 @@
     {
       "id_evse": "IT*ENX*ESN2311030111*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -39429,8 +39429,8 @@
     },
     {
       "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2220700267*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ACEA ENERGIA",
@@ -39609,8 +39609,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T5HK4AH00126*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -39629,8 +39629,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T5HK4AH00126*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -39769,8 +39769,8 @@
     },
     {
       "id_evse": "IT*ENX*E19XP22T5HK4AH00047*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -39790,7 +39790,7 @@
     {
       "id_evse": "IT*ENX*E20XM32T7KK3AR00047*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -39890,7 +39890,7 @@
     {
       "id_evse": "IT*ENX*E21XM32T7KK3AR00088*3",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -39969,8 +39969,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00238*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -40129,8 +40129,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ3299A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -40150,7 +40150,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00191*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -40210,7 +40210,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00334*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -40469,8 +40469,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ5261A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -40489,8 +40489,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ7550A*3",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -40589,8 +40589,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ3683A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -41129,8 +41129,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002817*2",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Plenitude On The Road S.r.l.",
@@ -41410,7 +41410,7 @@
     {
       "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2250700665*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ACEA ENERGIA",
@@ -41669,8 +41669,8 @@
     },
     {
       "id_evse": "IT*ENX*E19XP22T3KK4AH00018*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -41890,7 +41890,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AL00594*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42030,7 +42030,7 @@
     {
       "id_evse": "IT*ENX*E22BZ1182A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42130,7 +42130,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00338*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42150,7 +42150,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00341*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42249,8 +42249,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AK214RJ*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42370,7 +42370,7 @@
     {
       "id_evse": "IT*ENX*E24BZ1949A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42429,8 +42429,8 @@
     },
     {
       "id_evse": "IT*ENX*E24XP22T3QQJAN00190*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42730,7 +42730,7 @@
     {
       "id_evse": "IT*IOY*E422101",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "IONITY GMBH",
@@ -42769,8 +42769,8 @@
     },
     {
       "id_evse": "IT*PLN*EE000790*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -42789,8 +42789,8 @@
     },
     {
       "id_evse": "IT*PLN*EE000790*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -42809,8 +42809,8 @@
     },
     {
       "id_evse": "IT*PLN*EE000791*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -42989,8 +42989,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002614*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -43049,8 +43049,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003875*1",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -43090,7 +43090,7 @@
     {
       "id_evse": "IT*PLN*EE003952*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -43410,7 +43410,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00045*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -43490,7 +43490,7 @@
     {
       "id_evse": "IT*ENX*E19XP22T3KK4AZ00761*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -43569,8 +43569,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AL00634*1",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -43630,7 +43630,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AT00046*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -43650,7 +43650,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK4AL00575*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -43710,7 +43710,7 @@
     {
       "id_evse": "IT*ENX*E21XK11T2J03BF00530*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -43729,8 +43729,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AL00048*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -43749,8 +43749,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AL00048*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -43770,7 +43770,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AM00049*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44009,8 +44009,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00197*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44110,7 +44110,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00906*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44130,7 +44130,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00906*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44310,7 +44310,7 @@
     {
       "id_evse": "IT*ENX*E24BZ0980A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44429,8 +44429,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ4184A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44489,8 +44489,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00098*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44670,7 +44670,7 @@
     {
       "id_evse": "IT*EWI*EEW030801*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -44909,8 +44909,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003130*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -44990,7 +44990,7 @@
     {
       "id_evse": "IT*PLN*EE003945*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -45230,7 +45230,7 @@
     {
       "id_evse": "IT*DUF*EP0010*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "DUFERCO MOBILITY SRL",
@@ -45369,8 +45369,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3KK4AH00047*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -45429,8 +45429,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T5HK1AG00098*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -45670,7 +45670,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00586*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -45910,7 +45910,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00337*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -45990,7 +45990,7 @@
     {
       "id_evse": "IT*ENX*E23BZ0869A*3",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -46150,7 +46150,7 @@
     {
       "id_evse": "IT*ENX*E24BZ4188A*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -46169,8 +46169,8 @@
     },
     {
       "id_evse": "IT*ENX*E24XP22T3QQJAN00051*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -46189,8 +46189,8 @@
     },
     {
       "id_evse": "IT*ENX*E24XP22T3QQJAN00051*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -46470,7 +46470,7 @@
     {
       "id_evse": "IT*PLN*EE002126*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -46589,8 +46589,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003957*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -46610,7 +46610,7 @@
     {
       "id_evse": "IT*PLN*EE003959*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -46689,8 +46689,8 @@
     },
     {
       "id_evse": "IT*PLN*EE005245*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -46889,8 +46889,8 @@
     },
     {
       "id_evse": "IT*EMOE342",
-      "stato": "Non Attivo",
-      "stato_raw": "INOPERATIVE",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EMOBITALY S.r.l.",
@@ -47189,8 +47189,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T5HK1AG00098*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -47469,8 +47469,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AK453RJ*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -47730,7 +47730,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00614*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -47750,7 +47750,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00623*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -47770,7 +47770,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00938*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -47809,8 +47809,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN01011*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -47870,7 +47870,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AK147RJ*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -47910,7 +47910,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AK290RJ*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -48110,7 +48110,7 @@
     {
       "id_evse": "IT*ENX*ESN2312250705*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -48370,7 +48370,7 @@
     {
       "id_evse": "IT*EWI*EEW028402*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -48870,7 +48870,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3BB4U000285*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -48909,8 +48909,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T5AB4U000031*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -49109,8 +49109,8 @@
     },
     {
       "id_evse": "IT*ENX*E19XP22T3KK4AH00047*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -49230,7 +49230,7 @@
     {
       "id_evse": "IT*ENX*E20XM32T7KK4AR00255*3",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -49310,7 +49310,7 @@
     {
       "id_evse": "IT*ENX*E21XM32T7KK3AR00088*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -49330,7 +49330,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AK00272*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -49490,7 +49490,7 @@
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAL00065*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -49550,7 +49550,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00283*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -49849,8 +49849,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ4173A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -49869,8 +49869,8 @@
     },
     {
       "id_evse": "IT*ENX*E24XP22T3QQJAN00113*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -50069,8 +50069,8 @@
     },
     {
       "id_evse": "IT*PLN*EE001159*2",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -50349,8 +50349,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003954*1",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -50389,8 +50389,8 @@
     },
     {
       "id_evse": "IT*PLN*EE004060*1",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -50430,7 +50430,7 @@
     {
       "id_evse": "IT*PLN*EE004174*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -50469,8 +50469,8 @@
     },
     {
       "id_evse": "IT*PLN*EE006962*1",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -50829,8 +50829,8 @@
     },
     {
       "id_evse": "IT*ENX*E15ZP22T3BB1P000026*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -50849,8 +50849,8 @@
     },
     {
       "id_evse": "IT*ENX*E15ZP22T3BB1P000026*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -50969,8 +50969,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3BB4U000217*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -51570,7 +51570,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00185*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -51630,7 +51630,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00338*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -51930,7 +51930,7 @@
     {
       "id_evse": "IT*ENX*E24XP22T3QQJAN00190*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -51970,7 +51970,7 @@
     {
       "id_evse": "IT*ENX*E24XP22T3QQJAN00889*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -51990,7 +51990,7 @@
     {
       "id_evse": "IT*ENX*EC6E06BJC22FFUDDJSB*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -52010,7 +52010,7 @@
     {
       "id_evse": "IT*ENX*ESN2403141286*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -52169,8 +52169,8 @@
     },
     {
       "id_evse": "IT*PLN*EE002525*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -52510,7 +52510,7 @@
     {
       "id_evse": "ITEDNE0204*01*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Edison Next S.P.A.",
@@ -52549,8 +52549,8 @@
     },
     {
       "id_evse": "ITGESE806481010",
-      "stato": "Non Attivo",
-      "stato_raw": "INOPERATIVE",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -52630,7 +52630,7 @@
     {
       "id_evse": "ITGESE875729947",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -52710,7 +52710,7 @@
     {
       "id_evse": "IT*EMOE1109",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EMOBITALY S.r.l.",
@@ -52850,7 +52850,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3BB5U000450*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -53010,7 +53010,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T5HK4AZ00031*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -53029,8 +53029,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AK00272*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -53129,8 +53129,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00211*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -53389,8 +53389,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00184*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -53409,8 +53409,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00189*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -53589,8 +53589,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AK370RJ*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -53789,8 +53789,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00226*1",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -53829,8 +53829,8 @@
     },
     {
       "id_evse": "IT*ENX*ESN2311030100*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -53989,8 +53989,8 @@
     },
     {
       "id_evse": "IT*EWI*E23BZ0920B*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -54009,8 +54009,8 @@
     },
     {
       "id_evse": "IT*EWI*EEW052301*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -54070,7 +54070,7 @@
     {
       "id_evse": "IT*PLN*EE002128*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -54209,8 +54209,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003980*1",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -54430,7 +54430,7 @@
     {
       "id_evse": "ITGESE830664121",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -54470,7 +54470,7 @@
     {
       "id_evse": "ITGESE839172438",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -54770,7 +54770,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3BB5U000436*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -54869,8 +54869,8 @@
     },
     {
       "id_evse": "IT*ENX*E19XP22T3KK4AS00075*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -55329,8 +55329,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAK01458*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -55690,7 +55690,7 @@
     {
       "id_evse": "IT*ENX*E23BZ5935A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -55749,8 +55749,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AM215RJ*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -55850,7 +55850,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00371*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -55970,7 +55970,7 @@
     {
       "id_evse": "IT*ENX*E24BZ3694A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -55990,7 +55990,7 @@
     {
       "id_evse": "IT*ENX*E24BZ3694A*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -56030,7 +56030,7 @@
     {
       "id_evse": "IT*ENX*E24BZ4181A*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -56450,7 +56450,7 @@
     {
       "id_evse": "IT*ATE*E00746*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Atlante S.r.l",
@@ -56509,8 +56509,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XM32T7CB3W000161*3",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -56529,8 +56529,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XP22T3BB1U000090*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -56969,8 +56969,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ3777A*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -56990,7 +56990,7 @@
     {
       "id_evse": "IT*ENX*E22BZ3777A*3",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -57129,8 +57129,8 @@
     },
     {
       "id_evse": "IT*ENX*E22XP22T3QQ1AN00700*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -57270,7 +57270,7 @@
     {
       "id_evse": "IT*ENX*E23XP22T3KK4AK056RJ*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -57370,7 +57370,7 @@
     {
       "id_evse": "IT*ENX*E24BZ4192A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -57570,7 +57570,7 @@
     {
       "id_evse": "IT*EWI*E22BZ3667A*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -57750,7 +57750,7 @@
     {
       "id_evse": "IT*PLN*EE002524*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -58090,7 +58090,7 @@
     {
       "id_evse": "ITGESE839172436",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -58130,7 +58130,7 @@
     {
       "id_evse": "ITGESE875729948",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -58430,7 +58430,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3BB4U000282*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -58969,8 +58969,8 @@
     },
     {
       "id_evse": "IT*ENX*E23XP22T3KKJCK00054*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -59290,7 +59290,7 @@
     {
       "id_evse": "IT*PLN*EE000375*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -59429,8 +59429,8 @@
     },
     {
       "id_evse": "IT*PLN*EE001568*2",
-      "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -59470,7 +59470,7 @@
     {
       "id_evse": "IT*PLN*EE002125*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -59609,8 +59609,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003958*1",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -60409,8 +60409,8 @@
     },
     {
       "id_evse": "IT*ENX*E19XP22T5HK1AL00171*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -60429,8 +60429,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XM32T7KK3AR00045*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -60449,8 +60449,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XM32T7KK3AR00045*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -60609,8 +60609,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ3162A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -60630,7 +60630,7 @@
     {
       "id_evse": "IT*ENX*E22XP22T3KKJAL00220*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -60729,8 +60729,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ7550A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -61129,8 +61129,8 @@
     },
     {
       "id_evse": "IT*PLN*EE001192*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -61149,8 +61149,8 @@
     },
     {
       "id_evse": "IT*PLN*EE001192*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -61430,7 +61430,7 @@
     {
       "id_evse": "IT*PLN*EE002527*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -61470,7 +61470,7 @@
     {
       "id_evse": "IT*PLN*EE002528*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -61590,7 +61590,7 @@
     {
       "id_evse": "IT*PLN*EE002902*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -61929,8 +61929,8 @@
     },
     {
       "id_evse": "IT*PLN*EH000969*3",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -61970,7 +61970,7 @@
     {
       "id_evse": "IT*TSL*E000AD0",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
@@ -62170,7 +62170,7 @@
     {
       "id_evse": "ITGESE840303657",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Go Electric Stations SRLS",
@@ -62369,8 +62369,8 @@
     },
     {
       "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2220700267*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ACEA ENERGIA",
@@ -62630,7 +62630,7 @@
     {
       "id_evse": "IT*ENX*E18XM32T7CB3W000150*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -62649,8 +62649,8 @@
     },
     {
       "id_evse": "IT*ENX*E18XM32T7CB3W000150*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -62830,7 +62830,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AL00644*2",
       "stato": "Attivo",
-      "stato_raw": "RESERVED",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -63029,8 +63029,8 @@
     },
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00125*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -63489,8 +63489,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003953*2",
-      "stato": "Non Attivo",
-      "stato_raw": "BLOCKED",
+      "stato": "Attivo",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -63529,8 +63529,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003959*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "BLOCKED",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -63990,7 +63990,7 @@
     {
       "id_evse": "IT*TSL*E000X63",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
@@ -64110,7 +64110,7 @@
     {
       "id_evse": "IT*TSL*E0E3D4V",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
@@ -64310,7 +64310,7 @@
     {
       "id_evse": "IT*TSL*E0E3D4T",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
