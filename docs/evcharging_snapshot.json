@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-18T00:07:02+00:00",
+  "generated_at": "2026-10-18T00:12:19+00:00",
   "stats": {
     "total": 3216,
-    "active": 1914,
-    "inactive": 1302,
-    "charging": 305
+    "active": 1913,
+    "inactive": 1303,
+    "charging": 304
   },
   "points": [
     {
@@ -24429,8 +24429,8 @@
     },
     {
       "id_evse": "IT*PLN*EE004182*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -64090,7 +64090,7 @@
     {
       "id_evse": "IT*TSL*E0E3D4U",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
