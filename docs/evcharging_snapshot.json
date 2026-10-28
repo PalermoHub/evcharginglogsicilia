@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-28T00:13:29+00:00",
+  "generated_at": "2026-10-28T00:18:49+00:00",
   "stats": {
     "total": 3216,
-    "active": 2262,
-    "inactive": 954,
-    "charging": 72
+    "active": 2260,
+    "inactive": 956,
+    "charging": 73
   },
   "points": [
     {
@@ -44650,7 +44650,7 @@
     {
       "id_evse": "IT*EWI*EEW0077S1*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -54129,8 +54129,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003897*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
@@ -54149,8 +54149,8 @@
     },
     {
       "id_evse": "IT*PLN*EE003897*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "BEC",
