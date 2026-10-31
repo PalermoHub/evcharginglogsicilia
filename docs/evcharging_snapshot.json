@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-31T07:14:33+00:00",
+  "generated_at": "2026-10-31T07:19:52+00:00",
   "stats": {
     "total": 3216,
-    "active": 1985,
-    "inactive": 1231,
+    "active": 1984,
+    "inactive": 1232,
     "charging": 317
   },
   "points": [
@@ -5650,7 +5650,7 @@
     {
       "id_evse": "IT*TSL*E0E3D4S",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
@@ -32690,7 +32690,7 @@
     {
       "id_evse": "IT*ENX*E23BZ0864A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -32709,8 +32709,8 @@
     },
     {
       "id_evse": "IT*ENX*E23BZ0864A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -39530,7 +39530,7 @@
     {
       "id_evse": "IT*ENX*E18XP22T3BB4U000223*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42470,7 +42470,7 @@
     {
       "id_evse": "IT*ENX*ESN2403141286*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44669,8 +44669,8 @@
     },
     {
       "id_evse": "IT*EWI*EEW030801*1",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "EWIVA SRL",
@@ -53029,8 +53029,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AK00272*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -61970,7 +61970,7 @@
     {
       "id_evse": "IT*TSL*E000AD0",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
@@ -63950,7 +63950,7 @@
     {
       "id_evse": "IT*TSL*E000AD4",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "Tesla Italia Srl.",
