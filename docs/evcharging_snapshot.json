@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-01T02:04:21+00:00",
+  "generated_at": "2026-11-01T02:10:02+00:00",
   "stats": {
     "total": 3216,
-    "active": 1881,
-    "inactive": 1335,
-    "charging": 311
+    "active": 1878,
+    "inactive": 1338,
+    "charging": 308
   },
   "points": [
     {
@@ -6190,7 +6190,7 @@
     {
       "id_evse": "IT*ENX*E20XM32T7KK3AR00045*3",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -9049,8 +9049,8 @@
     },
     {
       "id_evse": "IT*GES*ETCV5G",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "INOPERATIVE",
       "real_time": false,
       "usage_observable": false,
       "cpo": "UnoEnergy DriWe spa",
@@ -13270,7 +13270,7 @@
     {
       "id_evse": "IT*ACE*E*ST*C*AIRSQT2T2250700664*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ACEA ENERGIA",
@@ -20289,8 +20289,8 @@
     },
     {
       "id_evse": "IT*GES*EYMIH1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "INOPERATIVE",
       "real_time": false,
       "usage_observable": false,
       "cpo": "UnoEnergy DriWe spa",
@@ -39109,8 +39109,8 @@
     },
     {
       "id_evse": "IT*GES*EDVMPC",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "INOPERATIVE",
       "real_time": false,
       "usage_observable": false,
       "cpo": "UnoEnergy DriWe spa",
@@ -46309,8 +46309,8 @@
     },
     {
       "id_evse": "IT*GES*EWL82D",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "INOPERATIVE",
       "real_time": false,
       "usage_observable": false,
       "cpo": "UnoEnergy DriWe spa",
@@ -48430,7 +48430,7 @@
     {
       "id_evse": "IT*IOY*E422103",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "IONITY GMBH",
@@ -60449,8 +60449,8 @@
     },
     {
       "id_evse": "IT*ENX*E20XM32T7KK3AR00045*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
