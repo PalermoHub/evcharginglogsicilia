@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-06T00:39:44+00:00",
+  "generated_at": "2026-11-06T00:45:01+00:00",
   "stats": {
     "total": 3216,
     "active": 1809,
     "inactive": 1407,
-    "charging": 78
+    "charging": 80
   },
   "points": [
     {
@@ -8950,7 +8950,7 @@
     {
       "id_evse": "IT*ENX*E25XP22T3QQ2DA00125*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -27129,8 +27129,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KKJAK00601*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -42730,7 +42730,7 @@
     {
       "id_evse": "IT*IOY*E422101",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "IONITY GMBH",
@@ -43749,8 +43749,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AL00048*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
