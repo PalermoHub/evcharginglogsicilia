@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-08T02:23:00+00:00",
+  "generated_at": "2026-11-08T02:28:25+00:00",
   "stats": {
     "total": 3216,
     "active": 1876,
     "inactive": 1340,
-    "charging": 277
+    "charging": 276
   },
   "points": [
     {
@@ -43729,8 +43729,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AL00048*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -43749,8 +43749,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XP22T3KK4AL00048*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -62290,7 +62290,7 @@
     {
       "id_evse": "IT*ACE*E*ST*C*AIRSFCCT230100276*2",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ACEA ENERGIA",
