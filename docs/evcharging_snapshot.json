@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-13T21:54:09+00:00",
+  "generated_at": "2026-11-13T21:59:31+00:00",
   "stats": {
     "total": 3216,
-    "active": 2236,
-    "inactive": 980,
-    "charging": 158
+    "active": 2234,
+    "inactive": 982,
+    "charging": 159
   },
   "points": [
     {
@@ -28610,7 +28610,7 @@
     {
       "id_evse": "IT*ENX*E20XP22T3KK1AL00480*2",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -39910,7 +39910,7 @@
     {
       "id_evse": "IT*ENX*E21XM32T7KK3AR00089*1",
       "stato": "Attivo",
-      "stato_raw": "CHARGING",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -44349,8 +44349,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ1926A*1",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -44369,8 +44369,8 @@
     },
     {
       "id_evse": "IT*ENX*E24BZ1926A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENEL X WAY ITALIA SRL",
@@ -47429,8 +47429,8 @@
     },
     {
       "id_evse": "IT*ENX*E21XM32T7KK3AR00089*2",
-      "stato": "Non Attivo",
-      "stato_raw": "OUTOFORDER",
+      "stato": "Attivo",
+      "stato_raw": "AVAILABLE",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -64190,7 +64190,7 @@
     {
       "id_evse": "IT*ENX*E22BZ2764A*1",
       "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato_raw": "CHARGING",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
@@ -64209,8 +64209,8 @@
     },
     {
       "id_evse": "IT*ENX*E22BZ2764A*2",
-      "stato": "Attivo",
-      "stato_raw": "AVAILABLE",
+      "stato": "Non Attivo",
+      "stato_raw": "OUTOFORDER",
       "real_time": true,
       "usage_observable": true,
       "cpo": "ENX",
